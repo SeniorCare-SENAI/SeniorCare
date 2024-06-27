@@ -1,18 +1,30 @@
 header {
     background-color: var(--branco-claro);
     height: 64px;
-    display: flex;
-    justify-content: space-between;
 }
 
 header > :first-child {
-    margin-right: auto
+    margin-right: auto;
+    margin-left: calc(2 * var(--margin));
 }
 
 header > :last-child {
-    margin-left: auto
+    margin-left: auto;
+    margin-right: calc(2 * var(--margin));
 }
 
+.header-right img {
+    width: 32px;
+}
+
+.header-links {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 9990;
+}
 
 .header-links a {
     margin: calc(2 * var(--margin));
@@ -20,6 +32,15 @@ header > :last-child {
     font-size: calc(2 * var(--font-size));
 }
 
-.footer-right img {
-    width: 32px;
+header {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+}
+
+#header {
+    transition: opacity 0.3s ease;
 }

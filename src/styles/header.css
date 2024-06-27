@@ -1,0 +1,25 @@
+header {
+    background-color: var(--branco-claro);
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > :first-child {
+    margin-right: auto
+}
+
+header > :last-child {
+    margin-left: auto
+}
+
+
+.header-links a {
+    margin: calc(2 * var(--margin));
+    color: var(--verde-escuro);
+    font-size: calc(2 * var(--font-size));
+}
+
+.footer-right img {
+    width: 32px;
+}

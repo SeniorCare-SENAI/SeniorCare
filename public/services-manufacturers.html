@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Serviço-Fabricante | SeniorCare</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/services.css">
+    <script src="/src/assets/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="" alt="">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Serviços</a>
+            <a href="about.html">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <button onclick="window.location.href='/public/services-stock.html'">Estoque</button>
+            <button onclick="window.location.href='/public/services-manufacturers.html'">Fabricantes</button>
+            <button onclick="window.location.href='/public/services-products.html'">Produtos</button>
+            <button onclick="window.location.href='/public/services-employee.html'">Funcionarios</button>
+        </aside>
+        <article>
+            <nav>
+                <button id="adicionarFabri">Adicionar Fabricante</button>
+                <button id="buscarFabri">Buscar Fabricante</button>
+                <button id="apagarFabri">Apagar Fabricante</button>
+                <button id="listarFabri">Listar Fabricantes</button>
+            </nav>
+            <div class="adicionarFabri">
+                <div>
+                    <div>
+                        <input type="text" placeholder="Nome do Fabricante">
+                    </div>
+                    <div>
+                        <button id="cadastrarFuncionario">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buscarFabri">
+                <div>
+                    <input type="number" placeholder="Insira o código do Fabricante">
+                </div>
+                <div>
+                    <button id="buscarFabricante">Buscar</button>
+                </div>
+            </div>
+            <div class="apagarFabri">
+                <div>
+                    <input type="number" placeholder="Insira o código do Fabricante que desejá">
+                </div>
+                <div>
+                    <button id="apagarFabricante">Apagar</button>
+                </div>
+            </div>
+            <div class="listarFabri">
+                <div>
+                    <table>
+
+                    </table>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

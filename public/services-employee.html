@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Serviço-Funcionário | SeniorCare</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/services.css">
+    <script src="/src/assets/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="" alt="">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Serviços</a>
+            <a href="about.html">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <button onclick="window.location.href='/public/services-stock.html'">Estoque</button>
+            <button onclick="window.location.href='/public/services-manufacturers.html'">Fabricantes</button>
+            <button onclick="window.location.href='/public/services-products.html'">Produtos</button>
+            <button class="selectButton" onclick="window.location.href='/public/services-employee.html'">Funcionários</button>
+        </aside>
+        <article>
+            <nav class="navbar-article">
+                <button onclick="select(1)" id="adicionarProd">Adicionar Funcionário</button>
+                <button onclick="select(2)" id="buscarProd">Buscar Funcionário</button>
+                <button onclick="select(3)" id="apagarProd">Apagar Funcionário</button>
+                <button onclick="select(4)" id="listarProd">Listar Funcionários</button>
+            </nav>
+            <section>
+                <div id="section1" class="section">
+                    <div class="group-infos">
+                        <div class="input2">
+                            <input type="text" placeholder="Nome do Funcionário">
+                            <input type="text" placeholder="Cargo">
+                        </div>
+                        <div class="input3">
+                            <input type="number" placeholder="CPF">
+                            <input type="text" placeholder="Situação">
+                            <input type="tel" placeholder="Telefone">
+                        </div>
+                        <div class="section-button">
+                            <button id="cadastrarFuncionario">Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="section2" class="section">
+                    <div class="group-infos">
+                        <div class="input1">
+                            <input type="number" placeholder="Insira o código do Funcionário">
+                        </div>
+                        <div class="section-button">
+                            <button id="buscarFuncionario">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="section3" class="section">
+                    <div class="group-infos">
+                        <div class="input1">
+                            <input type="number" placeholder="Insira o código do Funcionário que desejá">
+                        </div>
+                        <div class="section-button">
+                            <button id="apagarFuncionario">Apagar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="section4" class="section">
+                    <div>
+                        <table>
+    
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

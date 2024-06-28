@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Serviço-Produto | SeniorCare</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/services.css">
+    <script src="/src/assets/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="" alt="">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Serviços</a>
+            <a href="about.html">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <button onclick="window.location.href='/public/services-stock.html'">Estoque</button>
+            <button onclick="window.location.href='/public/services-manufacturers.html'">Fabricantes</button>
+            <button onclick="window.location.href='/public/services-products.html'">Produtos</button>
+            <button onclick="window.location.href='/public/services-employee.html'">Funcionarios</button>
+        </aside>
+        <article>
+            <nav>
+                <button id="adicionarProd">Adicionar Produto</button>
+                <button id="buscarProd">Buscar Produto</button>
+                <button id="apagarProd">Apagar Produto</button>
+                <button id="listarProd">Listar Produtos</button>
+            </nav>
+            <div class="adicionarProd">
+                <div>
+                    <div class="input2">
+                        <input type="text" placeholder="Nome do Produto">
+                        <input type="text" placeholder="Fabricante">
+                    </div>
+                    <div class="input3">
+                        <input type="number" placeholder="Quantidade">
+                        <input type="number" placeholder="Valor">
+                        <input type="date" placeholder="Validade">
+                    </div>
+                    <textarea name="" placeholder="descrição" id="" cols="30" rows="10" style="height: 30px; height: 40px;"></textarea>
+                    <div>
+                        <button id="cadastrarProduto">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buscarProd">
+                <div>
+                    <input type="number" placeholder="Insira o código do Produto">
+                    <div>
+                        <button id="buscarProduto">Buscar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="apagarProd">
+                <div>
+                    <input type="number" placeholder="Insira o código do Produto que desejá">
+                    <div>
+                        <button id="apagarProduto">Apagar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="listarProd">
+                <div>
+                    <table>
+
+                    </table>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

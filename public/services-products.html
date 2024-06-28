@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <title>Serviço-Produto | SeniorCare</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/styles/services.css">
+    <link rel="stylesheet" href="../src/styles/services.css">
+    <link rel="stylesheet" href="../src/styles/config.css">
+    <link rel="stylesheet" href="../src/styles/header.css">
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../src/styles/footer.css">
     <script src="/src/assets/js/script.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <img src="" alt="">
-        <nav>
-            <a href="index.html">Home</a>
+    <header id="header" class="flex">
+        <a class="header-left flex" href="index.html"><img src="../src/assets/images/header/logo.svg"
+                alt="Utilize um navegador mais recente"></a>
+        <nav class="header-links">
+            <a href="index.html"><strong>Home</strong></a>
             <a href="services.html">Serviços</a>
             <a href="about.html">Sobre</a>
         </nav>
+        <a class="header-right flex" href="login.html"><img src="../src/assets/images/header/account.svg"
+                alt="Utilize um navegador mais recente"></a>
     </header>
     <main>
         <aside>
@@ -41,7 +50,8 @@
                         <input type="number" placeholder="Valor">
                         <input type="date" placeholder="Validade">
                     </div>
-                    <textarea name="" placeholder="descrição" id="" cols="30" rows="10" style="height: 30px; height: 40px;"></textarea>
+                    <textarea name="" placeholder="descrição" id="" cols="30" rows="10"
+                        style="height: 30px; height: 40px;"></textarea>
                     <div>
                         <button id="cadastrarProduto">Cadastrar</button>
                     </div>
@@ -73,4 +83,5 @@
         </article>
     </main>
 </body>
+
 </html>

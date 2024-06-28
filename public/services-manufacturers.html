@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/styles/services.css">
-    <link rel="stylesheet" href="../src/styles/config.css">
+    <!-- <link rel="stylesheet" href="../src/styles/config.css">
     <link rel="stylesheet" href="../src/styles/header.css">
     <link rel="stylesheet" href="../src/styles/main.css">
-    <link rel="stylesheet" href="../src/styles/footer.css">
+    <link rel="stylesheet" href="../src/styles/footer.css"> -->
     <script src="/src/assets/js/script.js" defer></script>
 </head>
 
 <body>
-    <header id="header" class="flex">
+    <!-- <header id="header" class="flex">
         <a class="header-left flex" href="index.html"><img src="../src/assets/images/header/logo.svg"
                 alt="Utilize um navegador mais recente"></a>
         <nav class="header-links">
@@ -24,54 +24,61 @@
         </nav>
         <a class="header-right flex" href="login.html"><img src="../src/assets/images/header/account.svg"
                 alt="Utilize um navegador mais recente"></a>
-    </header>
+    </header> -->
     <main>
         <aside>
             <button onclick="window.location.href='/public/services-stock.html'">Estoque</button>
-            <button onclick="window.location.href='/public/services-manufacturers.html'">Fabricantes</button>
+            <button class="selectButton" onclick="window.location.href='/public/services-manufacturers.html'">Fabricantes</button>
             <button onclick="window.location.href='/public/services-products.html'">Produtos</button>
             <button onclick="window.location.href='/public/services-employee.html'">Funcionarios</button>
+            <button onclick="window.location.href='/public/services-deliveries.html'">Entregas</button>
         </aside>
         <article>
-            <nav>
-                <button id="adicionarFabri">Adicionar Fabricante</button>
-                <button id="buscarFabri">Buscar Fabricante</button>
-                <button id="apagarFabri">Apagar Fabricante</button>
-                <button id="listarFabri">Listar Fabricantes</button>
+            <nav class="navbar-article">
+                <button class="button" onclick="select(1)" id="adicionarFabri">Adicionar Fabricante</button>
+                <button class="button" onclick="select(2)" id="buscarFabri">Buscar Fabricante</button>
+                <button class="button" onclick="select(3)" id="apagarFabri">Apagar Fabricante</button>
+                <button class="button" onclick="select(4)" id="listarFabri">Listar Fabricantes</button>
             </nav>
-            <div class="adicionarFabri">
-                <div>
-                    <div>
-                        <input type="text" placeholder="Nome do Fabricante">
+            <section>
+                <div id="section1" class="section">
+                    <div class="group-infos">
+                        <div class="input1">
+                            <input type="text" placeholder="Nome do Fabricante">
+                        </div>
+                        <div class="section-button">
+                            <button id="cadastrarFuncionario">Cadastrar</button>
+                        </div>
                     </div>
-                    <div>
-                        <button id="cadastrarFuncionario">Cadastrar</button>
+                </div>
+                <div  id="section2" class="section">
+                    <div class="group-infos">
+                        <div class="input1">
+                            <input type="number" placeholder="Insira o código do Fabricante">
+                        </div>
+                        <div class="section-button">
+                            <button id="buscarFabricante">Buscar</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="buscarFabri">
-                <div>
-                    <input type="number" placeholder="Insira o código do Fabricante">
+                <div  id="section3" class="section">
+                    <div class="group-infos">
+                        <div class="input1">
+                            <input type="number" placeholder="Insira o código do Fabricante que desejá">
+                        </div>
+                        <div class="section-button">
+                            <button id="apagarFabricante">Apagar</button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <button id="buscarFabricante">Buscar</button>
+                <div  id="section3" class="section">
+                    <div class="group-infos">
+                        <table>
+    
+                        </table>
+                    </div>
                 </div>
-            </div>
-            <div class="apagarFabri">
-                <div>
-                    <input type="number" placeholder="Insira o código do Fabricante que desejá">
-                </div>
-                <div>
-                    <button id="apagarFabricante">Apagar</button>
-                </div>
-            </div>
-            <div class="listarFabri">
-                <div>
-                    <table>
-
-                    </table>
-                </div>
-            </div>
+            </section>
         </article>
     </main>
 </body>

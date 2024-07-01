@@ -1,36 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-:root {
-    --font-dark: #1F1F1F;
-    --branco-white: #F1F1F1;
-
-    --verde-escuro: #398378;
-    --verde-pouco-escuro: #439b8e;
-    --verde-muito-menos-escuro: #46a597;
-    --verde: #6FC259;
-    --branco-claro: #E8E7D5;
-    --bege: #F5F4E0;
-    --bege-escuro: #e7e6d5;
-
-    --border-radius: 8px;
-    --margin: 8px;
-    --padding: 8px;
-
-    --font-size: 8px
-}
-
-* {
-    font-family: "Poppins";
-    margin: 0px;
-}
-
 body {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main {
     display: flex;
-    margin-top: 64px
+    margin-top: 64px;
+    height: 100vh;
 }
 
 aside {
@@ -52,13 +27,14 @@ aside button:hover {
     background-color: var(--verde-muito-menos-escuro);
 }
 
-article {
-    width: 85%;
-}
-
 .selectButton {
     background-color: var(--verde-pouco-escuro);
     font-weight: bold;
+}
+
+article {
+    width: 85%;
+    height: 100%;
 }
 
 .navbar-article {
@@ -78,63 +54,92 @@ article {
     color: var(--branco-white);
 }
 
-.button:hover {
+.navbar-article button:hover {
     font-weight: bold;
     border-bottom: 2px solid white;
 }
 
 section {
     background-color: var(--bege);
-    height: 100vh;
+    height: 92%;
 }
 
 .section {
     display: none;
 }
 
-#section1,
-#section2,
-#section3,
-#section1 {
+#section1, #section2, #section3, #section4 {
     padding: 20px;
 }
 
-.group-infos {
+form {
     background-color: var(--bege-escuro);
     padding: 15px;
     border-radius: 15px;
 }
 
-.input1,
-.input2,
-.input3 {
+form input::placeholder {
+    color: var(--verde-escuro);
+}
+
+.input1, .input2, .input3 {
     display: flex;
     justify-content: space-between;
 }
 
-.input1 input,
-.input2 input,
-.input3 input {
+.input1 input, .input2 input, .input3 input {
     border-radius: 10px;
     border: 1px solid var(--verde-escuro);
     margin: 3px 0;
-    padding: 5px;
+    padding: 5px 0;
+    cursor: text;
 }
 
-.input1 input {
+.single-input {
+    position: relative;
+}
+
+.single-input label{
+    cursor: text;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.input1 .single-input {
     width: 100%;
 }
 
-.input2 input {
+.input2 .single-input {
     width: 48.5%;
 }
 
-.input3 input {
+.input3 .single-input {
     width: 31.9%;
 }
 
-.group-infos input::placeholder {
+.input1 .single-input input {
+    width: 100%;
+}
+
+.input2 .single-input input {
+    width: 100%;
+}
+
+.input3 .single-input input {
+    width: 100%;
+}
+
+input[type="date"] {
+    color: var(--verde-escuro); 
+}
+
+textarea {
+    margin-top: 3px;
+    padding: 3px;
     color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro);
 }
 
 .section-button {
@@ -155,13 +160,13 @@ section {
 .section-button button {
     transition: all ease-in-out 0.2s;
     border: solid 3px var(--verde-escuro);
-    padding: calc(0.5 * var(--padding)) calc(3 * var(--padding));
-    border-radius: var(--border-radius);
+    padding: calc(0.5 * var(--geral)) calc(3 * var(--geral));
+    border-radius: var(--geral);
     background-color: var(--verde-escuro);
     color: var(--font-light);
     font-weight: bold;
-    font-size: calc(2 * var(--font-size));
-    margin-top: calc(2 * var(--margin));
+    font-size: calc(2 * var(--geral));
+    margin-top: calc(2 * var(--geral));
 }
 
 .section-button button:hover {
@@ -169,4 +174,14 @@ section {
     transition: all ease-in-out 0.2s;
     background-color: transparent;
     color: var(--verde-escuro);
+}
+
+@media (max-width: 794px) {
+    .input1, .input2, .input3 {
+        flex-direction: column;
+    } 
+
+    .input1 input, .input2 input, .input3 input {
+        width: 100%;
+    }
 }

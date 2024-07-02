@@ -119,15 +119,7 @@ form input::placeholder {
     width: 31.9%;
 }
 
-.input1 .single-input input {
-    width: 100%;
-}
-
-.input2 .single-input input {
-    width: 100%;
-}
-
-.input3 .single-input input {
+.single-input input, .single-input textarea {
     width: 100%;
 }
 
@@ -160,13 +152,13 @@ textarea {
 .section-button button {
     transition: all ease-in-out 0.2s;
     border: solid 3px var(--verde-escuro);
-    padding: calc(0.5 * var(--geral)) calc(3 * var(--geral));
-    border-radius: var(--geral);
+    padding: calc(0.5 * var(--padding)) calc(3 * var(--padding));
+    border-radius: var(--border-radius);
     background-color: var(--verde-escuro);
     color: var(--font-light);
     font-weight: bold;
-    font-size: calc(2 * var(--geral));
-    margin-top: calc(2 * var(--geral));
+    font-size: calc(2 * var(--font-size));
+    margin-top: calc(2 * var(--margin));
 }
 
 .section-button button:hover {

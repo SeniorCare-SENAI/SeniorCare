@@ -1,7 +1,3 @@
-#header {
-    display: none;
-}
-
 /* FOOTER CONTAINER-LEFT */
 .footer-background {
     width: 100%;
@@ -36,7 +32,8 @@ input {
     height: 25px;
 }
 
-.inputs input, .footer-container-right input {
+.inputs input,
+.footer-container-right input {
     background-color: var(--branco);
     border: solid 1px var(--verde-escuro);
     border-radius: var(--border-radius);
@@ -44,7 +41,8 @@ input {
     margin-top: var(--margin);
 }
 
-.inputs input::placeholder, .footer-container-right input::placeholder {
+.inputs input::placeholder,
+.footer-container-right input::placeholder {
     color: var(--verde-escuro);
     padding: var(--padding);
 }
@@ -66,7 +64,8 @@ input {
     margin-top: 0;
 }
 
-.footer-container-right, .footer-container-left {
+.footer-container-right,
+.footer-container-left {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -110,6 +109,7 @@ input {
     background-color: transparent;
     color: var(--verde-escuro);
 }
+
 /* END FOOTER CONTAINER-LEFT */
 
 

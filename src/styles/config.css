@@ -15,7 +15,7 @@
 
     --border-radius: 8px;
     --margin: 8px;
-    --pading: 8px;
+    --padding: 8px;
 
     --font-size: 8px;
 }
@@ -27,6 +27,12 @@
     padding: 0;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 a, input, textarea {
-    outline: 0;
+    outline: var(--verde-escuro);
 }

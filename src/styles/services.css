@@ -84,6 +84,7 @@ form input::placeholder {
 
 .input1, .input2, .input3 {
     display: flex;
+    margin-top: calc(2* var(--margin));
     justify-content: space-between;
 }
 
@@ -91,7 +92,7 @@ form input::placeholder {
     border-radius: 10px;
     border: 1px solid var(--verde-escuro);
     margin: 3px 0;
-    padding: 5px 0;
+    padding: 5px;
     cursor: text;
 }
 
@@ -102,9 +103,22 @@ form input::placeholder {
 .single-input label{
     cursor: text;
     position: absolute;
-    left: 0;
-    bottom: 5px;
+    left: 10px;
+    bottom: 8px;
     transition: 0.5s ease-in-out;
+    color: var(--verde-escuro);
+}
+
+.single-input input:focus ~ label, .single-input-input input:valid ~ label {
+/* .single-input textarea:focus ~ label, .single-input-input textarea:valid ~ label  */
+    transform: translateY(-31px);
+    font-size: 12px;
+    color: var(--verde-pouco-escuro);
+    background-color: white;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border: var(--verde-escuro) 0.5px solid;
+    padding: 0 var(--padding);
+    border-bottom: 0;
 }
 
 .input1 .single-input {
@@ -121,6 +135,7 @@ form input::placeholder {
 
 .single-input input, .single-input textarea {
     width: 100%;
+    font-size: calc(var(--font-size)*2);
 }
 
 input[type="date"] {
@@ -139,14 +154,6 @@ textarea {
     justify-content: center;
     margin-top: 10px;
 
-    button {
-        background-color: var(--verde-escuro);
-        border: 0;
-        border-radius: 15px;
-        padding: 7px 80px;
-        color: var(--branco-claro);
-        font-weight: bold;
-    }
 }
 
 .section-button button {

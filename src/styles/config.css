@@ -13,7 +13,11 @@
     --bege: #F5F4E0;
     --bege-escuro: #e7e6d5;
 
-    --geral: 8px;
+    --border-radius: 8px;
+    --margin: 8px;
+    --pading: 8px;
+
+    --font-size: 8px;
 }
 
 * {

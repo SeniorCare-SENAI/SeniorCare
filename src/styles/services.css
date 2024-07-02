@@ -1,10 +1,11 @@
 body {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main {
     display: flex;
-    margin-top: 64px
+    margin-top: 64px;
+    height: 100vh;
 }
 
 aside {
@@ -22,46 +23,63 @@ aside button {
     color: var(--branco-white);
 }
 
-article {
-    width: 85%;
+aside button:hover {
+    background-color: var(--verde-muito-menos-escuro);
 }
 
 .selectButton {
-    background-color: var(--verde-escuro);
+    background-color: var(--verde-pouco-escuro);
     font-weight: bold;
+}
+
+article {
+    width: 85%;
+    height: 100%;
 }
 
 .navbar-article {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     background-color: var(--verde);
+    padding: 18px 0;
 }
 
 .navbar-article button {
-    padding: 20px 0;
+    padding: 2px 10px;
     border: 0;
+
     background-color: var(--verde);
     color: var(--branco-white);
 }
 
+.navbar-article button:hover {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
 section {
     background-color: var(--bege);
-    height: 100vh;  
+    height: 92%;
 }
 
 .section {
     display: none;
 }
 
-#section1, #section2, #section3, #section1 {
+#section1, #section2, #section3, #section4 {
     padding: 20px;
 }
 
-.group-infos {
+form {
     background-color: var(--bege-escuro);
     padding: 15px;
     border-radius: 15px;
+}
+
+form input::placeholder {
+    color: var(--verde-escuro);
 }
 
 .input1, .input2, .input3 {
@@ -73,29 +91,62 @@ section {
     border-radius: 10px;
     border: 1px solid var(--verde-escuro);
     margin: 3px 0;
-    padding: 5px;
+    padding: 5px 0;
+    cursor: text;
 }
 
-.input input {
+.single-input {
+    position: relative;
+}
+
+.single-input label{
+    cursor: text;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.input1 .single-input {
     width: 100%;
 }
 
-.input2 input{
+.input2 .single-input {
     width: 48.5%;
 }
 
-.input3 input{
+.input3 .single-input {
     width: 31.9%;
 }
 
-.group-infos input::placeholder {
+.input1 .single-input input {
+    width: 100%;
+}
+
+.input2 .single-input input {
+    width: 100%;
+}
+
+.input3 .single-input input {
+    width: 100%;
+}
+
+input[type="date"] {
+    color: var(--verde-escuro); 
+}
+
+textarea {
+    margin-top: 3px;
+    padding: 3px;
     color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro);
 }
 
 .section-button {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+
     button {
         background-color: var(--verde-escuro);
         border: 0;
@@ -103,5 +154,34 @@ section {
         padding: 7px 80px;
         color: var(--branco-claro);
         font-weight: bold;
+    }
+}
+
+.section-button button {
+    transition: all ease-in-out 0.2s;
+    border: solid 3px var(--verde-escuro);
+    padding: calc(0.5 * var(--geral)) calc(3 * var(--geral));
+    border-radius: var(--geral);
+    background-color: var(--verde-escuro);
+    color: var(--font-light);
+    font-weight: bold;
+    font-size: calc(2 * var(--geral));
+    margin-top: calc(2 * var(--geral));
+}
+
+.section-button button:hover {
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    background-color: transparent;
+    color: var(--verde-escuro);
+}
+
+@media (max-width: 794px) {
+    .input1, .input2, .input3 {
+        flex-direction: column;
+    } 
+
+    .input1 input, .input2 input, .input3 input {
+        width: 100%;
     }
 }

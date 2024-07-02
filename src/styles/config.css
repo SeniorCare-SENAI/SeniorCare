@@ -5,26 +5,26 @@
     --font-light: #F1F1F1;
     
     --verde-escuro: #398378;
+    --verde-pouco-escuro: #439b8e;
+    --verde-muito-menos-escuro: #46a597;
     --verde: #6FC259;
+    
+    --branco-white: #F1F1F1;
     --branco-claro: #E8E7D5;
     --branco: #F1F1F1;
     --bege: #F5F4E0;
+    --bege-escuro: #e7e6d5;
 
-    --border-radius: 8px;
-    --margin: 8px;
-    --padding: 8px;
-
-    --font-size: 8px
+    --geral: 8px;
 }
 
 * {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     margin: 0;
+    padding: 0;
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+a, input, textarea {
+    outline: 0;
 }

@@ -47,12 +47,24 @@
                 <div id="section1" class="section">
                     <form>
                         <div class="input2">
-                            <input type="date" placeholder="data da entrega">
-                            <input type="text" placeholder="responsavel pela entrega">
+                            <div class="single-input">
+                                <input type="date" required id="dataEntreg">
+                                <label for="dataEntreg">data da entrega</label>
+                            </div>
+                            <div class="single-input">
+                                <input type="text" required id="resposavelEntreg">
+                                <label for="resposavelEntreg">Responsável pela entrega</label>
+                            </div>
                         </div>
                         <div class="input2">
-                            <input type="number" placeholder="código do estoque">
-                            <input type="number" placeholder="código do funcionário">
+                            <div class="single-input">
+                                <input type="number" required id="codEsto">
+                                <label for="codEsto">Código do estoque</label>
+                            </div>
+                            <div class="single-input">
+                                <input type="number" required id="codFunc">
+                                <label for="codFunc">Código do funcionário</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="cadastrarEntrega">Cadastrar</button>
@@ -62,7 +74,10 @@
                 <div id="section2" class="section">
                     <form>
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do Entrega">
+                            <div class="single-input">
+                                <input type="number" required id="codEntreg">
+                                <label for="codEntreg">Insira o código da Entrega</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="buscarEntrega">Buscar</button>
@@ -72,7 +87,10 @@
                 <div id="section3" class="section">
                     <form>
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do Entrega">
+                            <div class="single-input">
+                                <input type="number" required id="codEntreg">
+                                <label for="codEntreg">Insira o código da Entrega</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="apagarEntrega">Apagar</button>

@@ -78,10 +78,6 @@ form {
     border-radius: 15px;
 }
 
-form input::placeholder {
-    color: var(--verde-escuro);
-}
-
 .input1, .input2, .input3 {
     display: flex;
     margin-top: calc(2* var(--margin));
@@ -96,6 +92,7 @@ form input::placeholder {
     cursor: text;
 }
 
+
 .single-input {
     position: relative;
 }
@@ -109,9 +106,19 @@ form input::placeholder {
     color: var(--verde-escuro);
 }
 
-.single-input input:focus ~ label, .single-input-input input:valid ~ label {
-/* .single-input textarea:focus ~ label, .single-input-input textarea:valid ~ label  */
-    transform: translateY(-31px);
+.single-input input:focus ~ label, .single-input-input input:valid ~ label, .single-input textarea:focus ~ label, .single-input-input textarea:valid ~ label {
+    transform: translateY(-29px);
+    font-size: 12px;
+    color: var(--verde-pouco-escuro);
+    background-color: white;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border: var(--verde-escuro) 0.5px solid;
+    padding: 0 var(--padding);
+    border-bottom: 0;
+}
+
+.input1 .single-input input:focus ~ label, .input1 .single-input-input input:valid ~ label, .input1 .single-input textarea:focus ~ label, .input1 .single-input-input textarea:valid ~ label {
+    transform: translateY(-30px);
     font-size: 12px;
     color: var(--verde-pouco-escuro);
     background-color: white;
@@ -122,24 +129,40 @@ form input::placeholder {
 }
 
 .input1 .single-input {
-    width: 100%;
+    width: 99%;
 }
 
 .input2 .single-input {
-    width: 48.5%;
+    width: 49%;
 }
 
 .input3 .single-input {
-    width: 31.9%;
+    width: 31%;
 }
 
-.single-input input, .single-input textarea {
+.input1 .single-input input, .single-input textarea {
     width: 100%;
     font-size: calc(var(--font-size)*2);
 }
 
+.input2 .single-input input {
+    width: 99%;
+    font-size: calc(var(--font-size)*2);
+}
+
+.input3 .single-input input {
+    width: 98%;
+    font-size: calc(var(--font-size)*2);
+}
+
 input[type="date"] {
-    color: var(--verde-escuro); 
+    color: white; 
+    
+}
+
+input[type="date"]:focus, input[type="date"]:valid {
+    transition: 500ms;
+    color: var(--verde-escuro);
 }
 
 textarea {

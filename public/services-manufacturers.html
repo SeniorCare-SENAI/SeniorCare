@@ -46,8 +46,14 @@
                 <div id="section1" class="section">
                     <form>
                         <div class="input2">
-                            <input type="text" placeholder="Nome do Fabricante">
-                            <input type="number" placeholder="Insira o código de Funcionário">
+                            <div class="single-input">
+                                <input type="text" required id="nomeFunc">
+                                <label for="nomeFunc">Nome do Fabricante</label>
+                            </div>
+                            <div class="single-input">
+                                <input type="number" required id="codFunc">
+                                <label for="codFunc">Insira o código de Funcionário</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="cadastrarFabricante">Cadastrar</button>
@@ -57,7 +63,10 @@
                 <div  id="section2" class="section">
                     <form>
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do Fabricante">
+                            <div class="single-input">
+                                <input type="number" required id="codFabri">
+                                <label for="codFabri">Insira o código do Fabricante</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="buscarFabricante">Buscar</button>
@@ -67,7 +76,10 @@
                 <div  id="section3" class="section">
                     <form>
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do Fabricante">
+                            <div class="single-input">
+                                <input type="number" required id="codFabri">
+                                <label for="codFabri">Insira o código do Fabricante</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="apagarFabricante">Apagar</button>

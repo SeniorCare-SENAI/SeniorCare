@@ -33,6 +33,6 @@
     align-items: center;
 }
 
-a, input, textarea {
+a, input, textarea, button {
     outline: var(--verde-escuro);
 }

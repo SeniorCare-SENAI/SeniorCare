@@ -47,19 +47,40 @@
                 <div id="section1" class="section">
                     <form>
                         <div class="input2">
-                            <input type="number" placeholder="CNPJ">
-                            <input type="number" placeholder="CPF">
+                            <div class="single-input">
+                                <input type="number" id="cnpj">
+                                <label for="cnpj">CNPJ</label>
+                            </div>
+                            <div class="single-input">
+                                <input type="number" id="cpf">
+                                <label for="cpf">CPF</label>
+                            </div>
                         </div>
                         <div class="input1">
-                            <input type="text" placeholder="endereco">
+                            <div class="single-input">
+                                <input type="text" required id="endereco">
+                                <label for="endereco">endereco</label>
+                            </div>
                         </div>
                         <div class="input2">
-                            <input type="text" placeholder="nome do Doador">
-                            <input type="number" placeholder="código do fabrincante">
+                            <div class="single-input">
+                                <input type="text" required id="nomeDoador">
+                                <label for="nomeDoador">nome do Doador</label>
+                            </div>
+                            <div class="single-input">
+                                <input type="number" required id="codFab">
+                                <label for="codFab">código do fabrincante</label>
+                            </div>
                         </div>
                         <div class="input2">
-                            <input type="number" placeholder="Situação">
-                            <input type="date" placeholder="telefone">
+                            <div class="single-input">
+                                <input type="text" required id="situacao">
+                                <label for="situacao">Situação</label>
+                            </div>
+                            <div class="single-input">
+                                <input type="tel" required id="telefone">
+                                <label for="telefone">telefone</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="cadastrarDoador">Cadastrar</button>
@@ -69,7 +90,10 @@
                 <div id="section2" class="section">
                     <form>
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do doador">
+                            <div class="single-input">
+                                <input type="number" required id="codDoa">
+                                <label for="codDoa">Insira o código do doador</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="buscarDoador">Buscar</button>
@@ -79,7 +103,10 @@
                 <div id="section3" class="section">
                     <form>
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do doador">
+                            <div class="single-input">
+                                <input type="number" required id="codDoa">
+                                <label for="codDoa">Insira o código do doador</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="apagarDoador">Apagar</button>

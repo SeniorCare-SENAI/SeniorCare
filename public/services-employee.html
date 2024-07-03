@@ -48,13 +48,28 @@
                 <div id="section1" class="section">
                     <form>
                         <div class="input2">
-                            <input type="text" placeholder="Nome do Funcionário">
-                            <input type="text" placeholder="Cargo">
+                            <div class="single-input">
+                                <input required type="text" id="nomeFunc">
+                                <label for="nomeFunc">Nome do Funcionário</label>
+                            </div>
+                            <div class="single-input">
+                                <input required type="text" id="cargo">
+                                <label for="cargo">Cargo</label>
+                            </div>
                         </div>
                         <div class="input3">
-                            <input type="number" placeholder="CPF">
-                            <input type="text" placeholder="Situação">
-                            <input type="tel" placeholder="Telefone">
+                            <div class="single-input">
+                                <input required type="number" id="cpf">
+                                <label for="cpf">CPF</label>
+                            </div>
+                            <div class="single-input">
+                                <input required type="text" id="situacao">
+                                <label for="situacao">Situação</label>
+                            </div>
+                            <div class="single-input">
+                                <input required type="tel" id="telefone">
+                                <label for="telefone">Telefone</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="cadastrarFuncionario">Cadastrar</button>
@@ -64,7 +79,10 @@
                 <div id="section2" class="section">
                     <form>
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do Funcionário">
+                            <div class="single-input">
+                                <input required type="number" id="codFunc">
+                                <label for="codFunc">Insira o código do Funcionário</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="buscarFuncionario">Buscar</button>
@@ -74,7 +92,10 @@
                 <div id="section3" class="section">
                     <form>
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do Funcionário">
+                            <div class="single-input">
+                                <input required type="number" id="codFunc">
+                                <label for="codFunc">Insira o código do Funcionário</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="apagarFuncionario">Apagar</button>

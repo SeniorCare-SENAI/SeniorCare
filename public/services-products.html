@@ -46,23 +46,47 @@
                 <div id="section1" class="section">
                     <form>
                         <div class="input1">
-                            <input type="text" placeholder="Nome do Produto">
+                            <div class="single-input">
+                                <input type="text" required id="nomeProd">
+                                <label for="nomeProd">Nome do Produto</label>
+                            </div>
                         </div>
                         <div class="input3">
-                            <input type="number" placeholder="Quantidade">
-                            <input type="number" placeholder="Valor">
-                            <input type="date" placeholder="Validade">
+                            <div class="single-input">
+                                <input type="number" required id="qtde">
+                                <label for="qtde">Quantidade</label>
+                            </div>
+                            <div class="single-input">
+                                <input required type="number" id="valor">
+                                <label for="valor">Valor</label>
+                            </div>
+                            <div class="single-input">
+                                <input required type="date" id="validade">
+                                <label for="validade">Validade</label>
+                            </div>
                         </div>
                         <div class="input2">
-                            <input type="text" placeholder="Fabricante">
-                            <input type="text" placeholder="Doador">
+                            <div class="single-input">
+                                <input required type="text" id="fabricante">
+                                <label for="fabricante">Fabricante</label>
+                            </div>
+                            <div class="single-input">
+                                <input required type="text" id="doador">
+                                <label for="doador">Doador</label>
+                            </div>
                         </div>
                         <div class="input2">
-                            <input type="text" placeholder="Funcionário">
-                            <input type="text" placeholder="Estoque">
+                            <div class="single-input">
+                                <input required type="text" id="funcionario">
+                                <label for="funcionario">Funcionário</label>
+                            </div>
+                            <div class="single-input">
+                                <input required type="text" id="estoque">
+                                <label for="estoque">Estoque</label>
+                            </div>
                         </div>
                         <div class="input1">
-                            <textarea placeholder="descrição" style="width: 100%; height: 40px; border-radius: 15px"></textarea>
+                            <textarea placeholder="descrição" style="width: 100%; height: 40px; border-radius: 8px"></textarea>
                         </div>
                         <div class="section-button">
                             <button id="cadastrarProduto">Cadastrar</button>
@@ -72,7 +96,10 @@
                 <div id="section2" class="section">
                     <form>
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do Produto">
+                            <div class="single-input">
+                                <input required type="number" id="codProd">
+                                <label for="codProd">Insira o código do Produto</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="buscarProduto">Buscar</button>
@@ -82,7 +109,10 @@
                 <div id="section3" class="section">
                     <form>
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do Produto que desejá">
+                            <div class="single-input">
+                                <input required type="number" id="codProd">
+                                <label for="codProd">Insira o código do Produto</label>
+                            </div>
                         </div>
                         <div class="section-button">
                             <button id="apagarProduto">Apagar</button>

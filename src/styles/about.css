@@ -1,0 +1,41 @@
+body {
+    background-color: var(--verde-escuro);
+}
+
+.banner {
+    display: flex;
+}
+
+.img1, .img2 {
+    width: 50%;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    filter: contrast(150%);
+}
+
+.img1 img {
+    border-bottom-right-radius: 50px;
+}
+
+.img2 img {
+    border-bottom-left-radius: 50px;
+}
+
+.opacidade {
+    position: absolute;
+    background-color: var(--verde-opacidade);
+    bottom: 7px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 10px 10px var(--verde-bem-escuro);
+}
+
+.opacidade h1 {
+    margin: 40px 0 0 40px;
+    font-size: 150px;
+    color: var(--branco-white);
+}

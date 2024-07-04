@@ -4,7 +4,11 @@
     --font-dark: #1F1F1F;
     --font-light: #F1F1F1;
     
+    --verde-bem-escuro: #2a645b;
     --verde-escuro: #398378;
+    --verde-pouco-escuro: #439b8e;
+    --verde-muito-menos-escuro: #46a597;
+    --verde-opacidade: rgba(61, 187, 166, 0.4);
     --verde: #6FC259;
     --branco-claro: #E8E7D5;
     --branco: #F1F1F1;
@@ -28,4 +32,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+a, input, textarea, button {
+    outline: var(--verde-escuro);
 }

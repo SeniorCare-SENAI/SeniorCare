@@ -3,9 +3,11 @@
 :root {
     --font-dark: #1F1F1F;
     
+    --verde-bem-escuro: #2a645b;
     --verde-escuro: #398378;
     --verde-pouco-escuro: #439b8e;
     --verde-muito-menos-escuro: #46a597;
+    --verde-opacidade: rgba(61, 187, 166, 0.4);
     --verde: #6FC259;
     
     --branco-white: #F1F1F1;

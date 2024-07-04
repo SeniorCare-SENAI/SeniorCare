@@ -4,7 +4,12 @@
     --font-dark: #1F1F1F;
     --font-light: #F1F1F1;
 
+    
+    --verde-bem-escuro: #2a645b;
     --verde-escuro: #398378;
+    --verde-pouco-escuro: #439b8e;
+    --verde-muito-menos-escuro: #46a597;
+    --verde-opacidade: rgba(61, 187, 166, 0.4);
     --verde: #6FC259;
 
     --branco-white: #F1F1F1;
@@ -21,6 +26,7 @@
     --border-radius: 8px;
 
     --font-size: 8px
+    --drop-shadow-color: rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -40,4 +46,7 @@ a,
 input,
 textarea {
     outline: 0;
+}
+a, input, textarea, button {
+    outline: var(--verde-escuro);
 }

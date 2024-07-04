@@ -1,12 +1,9 @@
-#header {
-    display: none;
-}
-
 /* FOOTER CONTAINER-LEFT */
 .footer-background {
     width: 100%;
-    position: absolute;
     z-index: -99;
+    position: relative;
+    top: 480px;
 }
 
 .footer-container {
@@ -15,6 +12,7 @@
 
 .footer-container-links {
     margin: calc(2 * var(--margin));
+    text-align: center;
 }
 
 .footer-container-links a {
@@ -36,7 +34,8 @@ input {
     height: 25px;
 }
 
-.inputs input, .footer-container-right input {
+.inputs input,
+.footer-container-right input {
     background-color: var(--branco);
     border: solid 1px var(--verde-escuro);
     border-radius: var(--border-radius);
@@ -44,7 +43,8 @@ input {
     margin-top: var(--margin);
 }
 
-.inputs input::placeholder, .footer-container-right input::placeholder {
+.inputs input::placeholder,
+.footer-container-right input::placeholder {
     color: var(--verde-escuro);
     padding: var(--padding);
 }
@@ -66,18 +66,18 @@ input {
     margin-top: 0;
 }
 
-.footer-container-right, .footer-container-left {
+.footer-container-right,
+.footer-container-left {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: calc(2 * var(--padding));
-    height: 350px;
-
+    margin: var(--margin) calc(3 * var(--margin));
     background-color: var(--branco-claro);
     border-radius: var(--border-radius);
     width: 600px;
-    margin: var(--margin);
+    height: 350px;
 }
 
 .message {
@@ -110,12 +110,12 @@ input {
     background-color: transparent;
     color: var(--verde-escuro);
 }
+
 /* END FOOTER CONTAINER-LEFT */
 
 
 
 /* FOOTER CONTAINER-RIGHT */
-
 iframe {
     width: 100%;
     height: 100%;
@@ -152,4 +152,23 @@ iframe {
 
 .footer-nav div img {
     width: 27px;
+}
+/* END FOOTER CONTAINER-RIGHT */
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 790px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-background {
+        top: 890px;
+    }
+
+    .footer-container-right, .footer-container-left {
+        margin: calc(2 * var(--margin)) var(--margin);
+        width: auto;
+    }
 }

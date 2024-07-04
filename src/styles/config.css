@@ -46,16 +46,3 @@
 a, input, textarea, button {
     outline: var(--verde-escuro);
 }
-
-a, input, textarea, button {
-    outline: var(--verde-escuro);
-}
-
-a,
-input,
-textarea {
-    outline: 0;
-}
-a, input, textarea, button {
-    outline: var(--verde-escuro);
-}

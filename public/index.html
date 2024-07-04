@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../src/styles/header.css">
     <link rel="stylesheet" href="../src/styles/main.css">
     <link rel="stylesheet" href="../src/styles/footer.css">
+    <link rel="stylesheet" href="../src/styles/home.css">
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
     <script src="../src/components/config.js" defer></script>
     <script src="../src/components/header.js" defer></script>
@@ -27,150 +28,97 @@
                 alt="Utilize um navegador mais recente"></a>
     </header>
     <main>
-
+        <div class="flex cards">
+            <div class="cards-container">
+                <h2 class="flex cards-container-tittle">Eficiência na Gestão de Estoques</h2>
+                <div class="cards-container-img">
+                    <img class="cards-container-img-image" src="../src/assets/images/home/img.png"
+                        alt="Utilize um navegador mais recente">
+                </div>
+                <p class="cards-container-desc">Controle preciso e em tempo real dos estoques, reduzindo desperdícios e
+                    garantindo a disponibilidade de itens essenciais.
+                </p>
+            </div>
+            <div class="cards-container">
+                <h2 class="flex cards-container-tittle">Facilidade de Uso</h2>
+                <div class="cards-container-img">
+                    <img class="cards-container-img-image" src="../src/assets/images/home/img.png"
+                        alt="Utilize um navegador mais recente">
+                </div>
+                <p class="cards-container-desc">Interface intuitiva e amigável, fácil de usar por todos os funcionários,
+                    independentemente do conhecimento tecnológico.
+                </p>
+            </div>
+            <div class="cards-container">
+                <h2 class="flex cards-container-tittle">Relatórios Detalhados</h2>
+                <div class="cards-container-img">
+                    <img class="cards-container-img-image" src="../src/assets/images/home/img.png"
+                        alt="Utilize um navegador mais recente">
+                </div>
+                <p class="cards-container-desc">Geração de relatórios sobre uso e reposição de produtos, permitindo uma
+                    análise aprofundada e decisões informadas.
+                </p>
+            </div>
+            <div class="cards-container">
+                <h2 class="flex cards-container-tittle">Acompanhamento de Validade</h2>
+                <div class="cards-container-img">
+                    <img class="cards-container-img-image" src="../src/assets/images/home/img.png"
+                        alt="Utilize um navegador mais recente">
+                </div>
+                <p class="cards-container-desc">Alertas automáticos para produtos próximos da validade, evitando
+                    desperdícios e garantindo a qualidade dos itens.
+                </p>
+            </div>
+        </div>
     </main>
     <footer>
         <img class="footer-background" src="../src/assets/images/footer/footer-background.svg"
             alt="Utilize um navegador mais recente">
-        <div class="footer-container">
+        <div class="flex footer-container">
             <div class="footer-container-left">
-                <nav>
-                    <div>
-                        <img src="" alt="Utilize um navegador mais recente">
-                        <p>(99) 99999-9999</p>
+                <nav class="footer-nav">
+                    <div class="margin-top">
+                        <img src="../src/assets/images/footer/phone.svg" alt="Utilize um navegador mais recente">
+                        <p class="copy-link">(99) 99999-9999</p>
                     </div>
                     <div>
-                        <img src="" alt="Utilize um navegador mais recente">
-                        <a href="mailto:contato@seniorcare.com">contato@seniorcare.com</a>
+                        <img src="../src/assets/images/footer/mail.svg" alt="Utilize um navegador mais recente">
+                        <a class="copy-link" target="_blank"
+                            href="mailto:contato@seniorcare.com">contato@seniorcare.com</a>
                     </div>
                     <div>
-                        <img src="" alt="Utilize um navegador mais recente">
-                        <a href="https://maps.app.goo.gl/CaJR3nCho21wnt179">Av. José Manoel Reis, S/N - Centro, Tijucas
+                        <img src="../src/assets/images/footer/address.svg" alt="Utilize um navegador mais recente">
+                        <a class="copy-link link-height" target="_blank"
+                            href="https://maps.app.goo.gl/CaJR3nCho21wnt179">Av. José Manoel Reis, S/N - Centro, Tijucas
                             - SC, 88200-000</a>
                     </div>
                 </nav>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14190.5995463147!2d-48.6321522!3d-27.23014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8a94ad26fb273%3A0xc3b8f5efdfdfc698!2sSENAI%20Tijucas!5e0!3m2!1spt-BR!2sbr!4v1719508374429!5m2!1spt-BR!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <form class="footer-container-right">
-                <div>
-                    <input type="text" id="" placeholder="Nome">
-                    <input type="tel" id="" placeholder="Telefone">
+            <form class="flex footer-container-right">
+                <div class="flex inputs inputs-margin-top">
+                    <input class="inputs-left" type="text" id="" placeholder="Nome">
+                    <input class="inputs-right" type="tel" id="" placeholder="Telefone">
                 </div>
-                <input type="email" id="" placeholder="Email">
-                <div>
-                    <input type="text" id="" placeholder="Empresa">
-                    <input type="text" id="" placeholder="Cidade">
+                <div class="email"><input type="email" id="" placeholder="Email"></div>
+                <div class="flex inputs">
+                    <input class="inputs-left" type="text" id="" placeholder="Empresa">
+                    <input class="inputs-right" type="text" id="" placeholder="Cidade">
                 </div>
-                <input type="text" id="" placeholder="Mensagem">
-                <button id="">Enviar</button>
+                <input class="message" type="text" id="" placeholder="Mensagem">
+                <button id="form-send">Enviar</button>
             </form>
         </div>
-        <nav class="footer-container-links">
-            <a href="https://github.com/SeniorCare-SENAI/SeniorCare"><img src="../src/assets/images/footer/github.svg"
-                    alt="Utilize um navegador mais recente"></a>
+        <nav class="flex footer-container-links">
+            <a class="flex" target="_blank" href="https://github.com/SeniorCare-SENAI/SeniorCare"><img
+                    src="../src/assets/images/footer/github.svg" alt="Utilize um navegador mais recente"></a>
             <p>Copyright © 2024 SeniorCare. All Rights Reserved.</p>
-            <a href="https://maps.app.goo.gl/CaJR3nCho21wnt179"><img src="../src/assets/images/footer/pin.svg"
+            <a class="flex" target="_blank" href="https://maps.app.goo.gl/CaJR3nCho21wnt179"><img
+                    src="../src/assets/images/footer/pin.svg" alt="Utilize um navegador mais recente"></a>
+            <a class="flex" target="_blank" href="#"><img src="../src/assets/images/footer/whatsapp.svg"
                     alt="Utilize um navegador mais recente"></a>
-            <a href="#"><img src="../src/assets/images/footer/whatsapp.svg" alt="Utilize um navegador mais recente"></a>
-        </nav>
-    </footer>
-    <footer>
-        <img class="footer-background" src="../src/assets/images/footer/footer-background.svg"
-            alt="Utilize um navegador mais recente">
-        <div class="footer-container">
-            <div class="footer-container-left">
-                <nav>
-                    <div>
-                        <img src="" alt="Utilize um navegador mais recente">
-                        <p>(99) 99999-9999</p>
-                    </div>
-                    <div>
-                        <img src="" alt="Utilize um navegador mais recente">
-                        <a href="mailto:contato@seniorcare.com">contato@seniorcare.com</a>
-                    </div>
-                    <div>
-                        <img src="" alt="Utilize um navegador mais recente">
-                        <a href="https://maps.app.goo.gl/CaJR3nCho21wnt179">Av. José Manoel Reis, S/N - Centro, Tijucas
-                            - SC, 88200-000</a>
-                    </div>
-                </nav>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14190.5995463147!2d-48.6321522!3d-27.23014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8a94ad26fb273%3A0xc3b8f5efdfdfc698!2sSENAI%20Tijucas!5e0!3m2!1spt-BR!2sbr!4v1719508374429!5m2!1spt-BR!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <form class="footer-container-right">
-                <div>
-                    <input type="text" id="" placeholder="Nome">
-                    <input type="tel" id="" placeholder="Telefone">
-                </div>
-                <input type="email" id="" placeholder="Email">
-                <div>
-                    <input type="text" id="" placeholder="Empresa">
-                    <input type="text" id="" placeholder="Cidade">
-                </div>
-                <input type="text" id="" placeholder="Mensagem">
-                <button id="">Enviar</button>
-            </form>
-        </div>
-        <nav class="footer-container-links">
-            <a href="https://github.com/SeniorCare-SENAI/SeniorCare"><img src="../src/assets/images/footer/github.svg"
-                    alt="Utilize um navegador mais recente"></a>
-            <p>Copyright © 2024 SeniorCare. All Rights Reserved.</p>
-            <a href="https://maps.app.goo.gl/CaJR3nCho21wnt179"><img src="../src/assets/images/footer/pin.svg"
-                    alt="Utilize um navegador mais recente"></a>
-            <a href="#"><img src="../src/assets/images/footer/whatsapp.svg" alt="Utilize um navegador mais recente"></a>
-        </nav>
-    </footer>
-    <footer>
-        <img class="footer-background" src="../src/assets/images/footer/footer-background.svg"
-            alt="Utilize um navegador mais recente">
-        <div class="footer-container">
-            <div class="footer-container-left">
-                <nav>
-                    <div>
-                        <img src="" alt="Utilize um navegador mais recente">
-                        <p>(99) 99999-9999</p>
-                    </div>
-                    <div>
-                        <img src="" alt="Utilize um navegador mais recente">
-                        <a href="mailto:contato@seniorcare.com">contato@seniorcare.com</a>
-                    </div>
-                    <div>
-                        <img src="" alt="Utilize um navegador mais recente">
-                        <a href="https://maps.app.goo.gl/CaJR3nCho21wnt179">Av. José Manoel Reis, S/N - Centro, Tijucas
-                            - SC, 88200-000</a>
-                    </div>
-                </nav>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14190.5995463147!2d-48.6321522!3d-27.23014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8a94ad26fb273%3A0xc3b8f5efdfdfc698!2sSENAI%20Tijucas!5e0!3m2!1spt-BR!2sbr!4v1719508374429!5m2!1spt-BR!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <form class="footer-container-right">
-                <div>
-                    <input type="text" id="" placeholder="Nome">
-                    <input type="tel" id="" placeholder="Telefone">
-                </div>
-                <input type="email" id="" placeholder="Email">
-                <div>
-                    <input type="text" id="" placeholder="Empresa">
-                    <input type="text" id="" placeholder="Cidade">
-                </div>
-                <input type="text" id="" placeholder="Mensagem">
-                <button id="">Enviar</button>
-            </form>
-        </div>
-        <nav class="footer-container-links">
-            <a href="https://github.com/SeniorCare-SENAI/SeniorCare"><img src="../src/assets/images/footer/github.svg"
-                    alt="Utilize um navegador mais recente"></a>
-            <p>Copyright © 2024 SeniorCare. All Rights Reserved.</p>
-            <a href="https://maps.app.goo.gl/CaJR3nCho21wnt179"><img src="../src/assets/images/footer/pin.svg"
-                    alt="Utilize um navegador mais recente"></a>
-            <a href="#"><img src="../src/assets/images/footer/whatsapp.svg" alt="Utilize um navegador mais recente"></a>
         </nav>
     </footer>
 </body>

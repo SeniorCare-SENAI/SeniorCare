@@ -2,30 +2,33 @@
 <html lang="pt-BR">
 
 <head>
-    <title>Serviços de Estoque | SeniorCare</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços de Estoque | SeniorCare</title>
+    <link rel="stylesheet" href="../src/styles/services.css">
     <link rel="stylesheet" href="../src/styles/config.css">
-    <link rel="stylesheet" href="/src/styles/services.css">
-    <!-- <link rel="stylesheet" href="../src/styles/header.css">
-    <link rel="stylesheet" href="../src/styles/main.css">
-    <link rel="stylesheet" href="../src/styles/footer.css"> -->
+    <link rel="stylesheet" href="../src/styles/header.css">
+    <link rel="stylesheet" href="../src/styles/footer.css">
 
-    <script src="/src/assets/js/script.js" defer></script>
+    <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
+
+    <script src="../src/components/header.js" defer></script>
+    <script src="../src/assets/js/script.js" defer></script>
+
 </head>
 
 <body>
-    <!-- <header id="header" class="flex">
+    <header id="header" class="flex">
         <a class="header-left flex" href="index.html"><img src="../src/assets/images/header/logo.svg"
                 alt="Utilize um navegador mais recente"></a>
         <nav class="header-links">
-            <a href="index.html"><strong>Home</strong></a>
-            <a href="services.html">Serviços</a>
+            <a href="index.html">Home</a>
+            <a href="services.html"><strong>Serviços</strong></a>
             <a href="about.html">Sobre</a>
         </nav>
         <a class="header-right flex" href="login.html"><img src="../src/assets/images/header/account.svg"
                 alt="Utilize um navegador mais recente"></a>
-    </header> -->
+    </header>
     <main>
         <aside>
             <button class="selectButton" onclick="window.location.href='/public/services-stock.html'">Estoque</button>
@@ -71,7 +74,7 @@
                         <div class="input1">
                             <div class="single-input">
                                 <input type="number" required id="codEsto">
-                                <label for="codEsto" >Insira o código do Estoque para Buscar</label>
+                                <label for="codEsto">Insira o código do Estoque para Buscar</label>
                             </div>
                         </div>
                         <div class="section-button">

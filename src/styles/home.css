@@ -1,3 +1,7 @@
+body {
+    background-color: var(--verde-escuro);
+}
+
 main {
     display: flex;
     justify-content: center;

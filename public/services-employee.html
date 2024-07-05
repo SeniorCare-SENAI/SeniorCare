@@ -11,12 +11,8 @@
     <link rel="stylesheet" href="../src/styles/main.css">
     <link rel="stylesheet" href="../src/styles/footer.css">
     <script src="../src/assets/js/script.js" defer></script>
-<<<<<<< Updated upstream
     <script src="../src/components/header.js" defer></script>
-=======
-    <!-- <script src="../src/components/header.js" defer></script> -->
-    <script src="conectionEmployee.js"></script>
->>>>>>> Stashed changes
+    <script src="conectionEmployee.js" defer></script>
 </head>
 
 <body>
@@ -44,7 +40,7 @@
                 <button onclick="select(1)" id="adicionarProd">Adicionar Funcionário</button>
                 <button onclick="select(2)" id="buscarProd">Buscar Funcionário</button>
                 <button onclick="select(3)" id="apagarProd">Apagar Funcionário</button>
-                <button onclick="select(4)" id="listarProd">Listar Funcionários</button>
+                <button onclick="select(4); listar() " id="listarProd">Listar Funcionários</button>
             </nav>
             <section>
                 <div id="section1" class="section">
@@ -76,6 +72,7 @@
                         <div class="section-button">
                             <button id="cadastrarFuncionario">Cadastrar</button>
                         </div>
+                        <div id="resposta"></div>
                     </div>
                 </div>
                 <div id="section2" class="section">
@@ -97,15 +94,15 @@
                             <input type="number" placeholder="Insira o código do funcionário">
                         </div>
                         <div class="section-button">
-                            <button id="apagarFuncionario">Apagar</button>
+                            <button id="apagarFuncionario" onclick="escolha()">Apagar</button>
                         </div>
                     </div>
                 </div>
                 <div id="section4" class="section">
-                    <div>
-                        <table>
+                    <div id="resList">
+                        <!-- <table>
 
-                        </table>
+                        </table> -->
                     </div>
                 </div>
             </section>

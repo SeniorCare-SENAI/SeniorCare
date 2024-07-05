@@ -31,11 +31,20 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    box-shadow: 0 10px 0 var(--verde-bem-escuro);
+    box-shadow: 0 10px 10px var(--verde-bem-escuro);
 }
 
 .opacidade h1 {
     margin: 40px 0 0 40px;
     font-size: 150px;
     color: var(--branco-white);
+}
+
+
+
+/* ----------------------------------------------------- */
+
+
+.about {
+    
 }

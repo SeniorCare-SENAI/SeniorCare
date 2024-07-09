@@ -14,11 +14,11 @@
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
 
     <script src="../src/components/header.js" defer></script>
-    <script src="../src/assets/js/script.js" defer></script>
+    <script src="conectionEmployee.js" defer></script>
 </head>
 
 <body>
-    <header id="header" class="flex">
+    <header id="h.eader" class="flex">
         <a class="header-left flex" href="index.html"><img src="../src/assets/images/header/logo.svg"
                 alt="Utilize um navegador mais recente"></a>
         <nav class="header-links">
@@ -40,10 +40,10 @@
         </aside>
         <article>
             <nav class="navbar-article">
-                <button class="button" onclick="select(1)" id="adicionarFunc">Adicionar Funcionário</button>
-                <button class="button" onclick="select(2)" id="buscarFunc">Buscar Funcionário</button>
-                <button class="button" onclick="select(3)" id="apagarFunc">Apagar Funcionário</button>
-                <button class="button" onclick="select(4)" id="listarFunc">Listar Funcionários</button>
+                <button onclick="select(1)" id="adicionarProd">Adicionar Funcionário</button>
+                <button onclick="select(2)" id="buscarProd">Buscar Funcionário</button>
+                <button onclick="select(3)" id="apagarProd">Apagar Funcionário</button>
+                <button onclick="select(4); listar() " id="listarProd">Listar Funcionários</button>
             </nav>
             <section>
                 <div id="section1" class="section">
@@ -75,7 +75,8 @@
                         <div class="section-button">
                             <button id="cadastrarFuncionario">Cadastrar</button>
                         </div>
-                    </form>
+                        <div id="resposta"></div>
+                    </div>
                 </div>
                 <div id="section2" class="section">
                     <form>
@@ -99,16 +100,16 @@
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="apagarFuncionario">Apagar</button>
+                            <button id="apagarFuncionario" onclick="escolha()">Apagar</button>
                         </div>
                     </form>
                 </div>
                 <div id="section4" class="section">
-                    <form>
-                        <table>
+                    <div id="resList">
+                        <!-- <table>
 
-                        </table>
-                    </form>
+                        </table> -->
+                    </div>
                 </div>
             </section>
         </article>

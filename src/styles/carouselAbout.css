@@ -4,7 +4,6 @@
     padding: calc(3 * var(--padding));
     margin: calc(5 * var(--margin));
     border-radius: calc(2 * var(--border-radius));
-    height: auto;
     height: 100%;
     width: 100%;
     max-width: 1200px;

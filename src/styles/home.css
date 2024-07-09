@@ -64,7 +64,7 @@ main {
 
 .larIdososInfo {
     background-color: var(--bege);
-    margin: 50px 65px;
+    margin: calc(5 * var(--margin));
     border-radius: calc(2*var(--border-radius));
     padding: calc(3*var(--padding));
     display: flex;

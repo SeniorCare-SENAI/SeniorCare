@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="../src/styles/footer.css">
     <link rel="stylesheet" href="../src/styles/home.css">
     <link rel="stylesheet" href="../src/styles/carouselHome.css">
+    <link rel="stylesheet" href="../src/styles/scroll.css">
+
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
+
     <script src="../src/components/config.js" defer></script>
     <script src="../src/components/header.js" defer></script>
     <script src="../src/components/carouselHome.js" defer></script>
@@ -33,31 +36,36 @@
         <div class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="filter-img" src="../src/assets/images/home/carousel/idosos1.jpg" alt="Imagem 1">
+                    <img class="filter-img" src="../src/assets/images/home/carousel/img1.png" alt="Imagem 1">
+                    <div class="opacidade"></div>
                     <div class="carousel-text">
                         <p>Funcionalidades <strong class="carousel-text-strong">Essenciais</strong> para uma <br> Experiência de Usuário <strong class="carousel-text-strong">Excepcional</strong>.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="filter-img" src="../src/assets/images/home/carousel/idosos2.jpeg" alt="Imagem 2">
+                    <img class="filter-img" src="../src/assets/images/home/carousel/img2.png" alt="Imagem 2">
+                    <div class="opacidade"></div>
                     <div class="carousel-text">
                         <p>Suprimentos <strong class="carousel-text-strong">Essenciais</strong> para <br> um Envelhecer com <strong class="carousel-text-strong">Dignidade</strong>!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="filter-img" src="../src/assets/images/home/carousel/idosos3.jpg" alt="Imagem 3">
+                    <img class="filter-img" src="../src/assets/images/home/carousel/img3.png" alt="Imagem 3">
+                    <div class="opacidade"></div>
                     <div class="carousel-text">
                         <p>Recursos <strong class="carousel-text-strong">Avançados</strong> <br> para uma <strong class="carousel-text-strong">Gestão</strong> Simplificada e Eficaz</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="filter-img" src="../src/assets/images/home/carousel/idosos4.jpg" alt="Imagem 3">
+                    <img class="filter-img" src="../src/assets/images/home/carousel/img4.png" alt="Imagem 4">
+                    <div class="opacidade"></div>
                     <div class="carousel-text">
                         <p>Soluções <strong class="carousel-text-strong">Inteligentes</strong> para um <br> Desempenho <strong class="carousel-text-strong">Ótimo</strong> e Seguro</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="filter-img" src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg" alt="Imagem 3">
+                    <img class="filter-img" src="../src/assets/images/home/carousel/img5.png" alt="Imagem 5">
+                    <div class="opacidade"></div>
                     <div class="carousel-text">
                         <p>Integrações <strong class="carousel-text-strong">Perfeitas</strong> para <br> uma Conectividade Sem <strong class="carousel-text-strong">Esforço</strong></p>
                     </div>
@@ -73,11 +81,18 @@
             <span class="indicator" onclick="showSlide(3)"></span>
             <span class="indicator" onclick="showSlide(4)"></span>
         </div>
+        <div class="larIdososInfo">
+            <div class="text">
+                <h1>Lar Santa Maria da Paz</h1>
+                O Lar Santa Maria da Paz é uma instituição que cuida de idosos, oferecendo um ambiente seguro e acolhedor. A equipe especializada proporciona assistência médica, cuidados diários e suporte emocional. Os residentes participam de atividades recreativas e terapêuticas que promovem o bem-estar e melhoram a qualidade de vida. A instituição também oferece alimentação balanceada e adequada às necessidades dos idosos. A interação com a comunidade e os familiares é incentivada, criando uma rede de apoio essencial para a saúde mental e emocional dos residentes.
+            </div>
+            <img src="../src/assets/images/home/santaMariaPaz.png" alt="">
+        </div>
         <div class="flex cards">
             <div class="cards-container">
                 <h2 class="flex cards-container-tittle">Eficiência na Gestão de Estoques</h2>
                 <div class="cards-container-img">
-                    <img class="cards-container-img-image" src="../src/assets/images/home/img.png"
+                    <img class="cards-container-img-image" src="../src/assets/images/home/gestaoEstoque.jpg"
                         alt="Utilize um navegador mais recente">
                 </div>
                 <p class="cards-container-desc">Controle preciso e em tempo real dos estoques, reduzindo desperdícios e
@@ -87,7 +102,7 @@
             <div class="cards-container">
                 <h2 class="flex cards-container-tittle">Facilidade de Uso</h2>
                 <div class="cards-container-img">
-                    <img class="cards-container-img-image" src="../src/assets/images/home/img.png"
+                    <img class="cards-container-img-image" src="../src/assets/images/home/facil.jpg"
                         alt="Utilize um navegador mais recente">
                 </div>
                 <p class="cards-container-desc">Interface intuitiva e amigável, fácil de usar por todos os funcionários,
@@ -97,7 +112,7 @@
             <div class="cards-container">
                 <h2 class="flex cards-container-tittle">Relatórios Detalhados</h2>
                 <div class="cards-container-img">
-                    <img class="cards-container-img-image" src="../src/assets/images/home/img.png"
+                    <img class="cards-container-img-image" src="../src/assets/images/home/relEstoque.jpg"
                         alt="Utilize um navegador mais recente">
                 </div>
                 <p class="cards-container-desc">Geração de relatórios sobre uso e reposição de produtos, permitindo uma
@@ -107,7 +122,7 @@
             <div class="cards-container">
                 <h2 class="flex cards-container-tittle">Acompanhamento de Validade</h2>
                 <div class="cards-container-img">
-                    <img class="cards-container-img-image" src="../src/assets/images/home/img.png"
+                    <img class="cards-container-img-image" src="../src/assets/images/home/valid.jpg"
                         alt="Utilize um navegador mais recente">
                 </div>
                 <p class="cards-container-desc">Alertas automáticos para produtos próximos da validade, evitando

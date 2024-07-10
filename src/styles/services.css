@@ -73,7 +73,7 @@ section {
     padding: 20px;
 }
 
-form {
+.box {
     background-color: var(--bege-escuro);
     padding: 15px;
     border-radius: 15px;

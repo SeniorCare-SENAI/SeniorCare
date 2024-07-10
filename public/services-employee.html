@@ -41,46 +41,47 @@
         </aside>
         <article>
             <nav class="navbar-article">
-                <button onclick="select(1)" id="adicionarProd">Adicionar Funcionário</button>
-                <button onclick="select(2)" id="buscarProd">Buscar Funcionário</button>
-                <button onclick="select(3)" id="apagarProd">Apagar Funcionário</button>
-                <button onclick="select(4); listar() " id="listarProd">Listar Funcionários</button>
+                <button onclick="select(1)" id="adicionarFun">Adicionar Funcionário</button>
+                <button onclick="select(2)" id="buscarFun">Buscar Funcionário</button>
+                <button onclick="select(3)" id="apagarFun">Apagar Funcionário</button>
+                <button onclick="select(4)" id="listarFun">Listar Funcionários</button>
             </nav>
             <section>
                 <div id="section1" class="section">
-                    <form>
+                    <div class="box">
                         <div class="input2">
                             <div class="single-input">
-                                <input required type="text" id="nomeFunc">
+                                <input type="text" id="nomeFunc">
                                 <label for="nomeFunc">Nome do Funcionário</label>
                             </div>
                             <div class="single-input">
-                                <input required type="text" id="cargo">
+                                <input type="text" id="cargo">
                                 <label for="cargo">Cargo</label>
                             </div>
                         </div>
                         <div class="input3">
                             <div class="single-input">
-                                <input required type="number" id="cpf">
+                                <input type="number" id="cpf">
                                 <label for="cpf">CPF</label>
                             </div>
                             <div class="single-input">
-                                <input required type="text" id="situacao">
+                                <input type="text" id="situacao">
                                 <label for="situacao">Situação</label>
                             </div>
                             <div class="single-input">
-                                <input required type="tel" id="telefone">
+                                <input type="tel" id="telefone">
                                 <label for="telefone">Telefone</label>
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="cadastrarFuncionario">Cadastrar</button>
+                            <button onclick="select(1)" id="cadastrarFuncionario">Cadastrar</button>
                         </div>
                         <div id="resposta"></div>
                     </div>
                 </div>
                 <div id="section2" class="section">
-                    <form>
+
+                    <div class="box">
                         <div class="input1">
                             <div class="single-input">
                                 <input required type="number" id="codFunc">
@@ -88,12 +89,13 @@
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="buscarFuncionario">Buscar</button>
+                            <button onclick="select(2)" id="buscarFuncionario">Buscar</button>
                         </div>
-                    </form>
+                        <div id="resproc"></div>
+                    </div>
                 </div>
                 <div id="section3" class="section">
-                    <form>
+                    <div class="box">
                         <div class="input1">
                             <div class="single-input">
                                 <input required type="number" id="codFunc">
@@ -101,16 +103,13 @@
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="apagarFuncionario" onclick="escolha()">Apagar</button>
+                            <button onclick="select(3)" id="apagarFuncionario" onclick="escolha()">Apagar</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <div id="section4" class="section">
-                    <div id="resList">
-                        <!-- <table>
-
-                        </table> -->
-                    </div>
+                    <button onclick="select(4)" id="listarFun">Listar</button>
+                    <div id="res"></div>
                 </div>
             </section>
         </article>

@@ -1,0 +1,39 @@
+.carouselCards {
+    display: none;
+    background-color: var(--branco-claro);
+    padding: calc(3 * var(--padding));
+    margin: calc(5 * var(--margin));
+    border-radius: calc(2 * var(--border-radius));
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.carouselCards-text {
+    color: var(--font-dark);
+}
+
+.carouselCards-text p strong {
+    color: var(--verde);
+}
+
+.carouselCards-text h2 {
+    font-size: calc(6 * var(--font-size));
+    text-align: justify;
+}
+
+.carouselCards-text p {
+    font-size: calc(2 * var(--font-size));
+    text-align: justify;
+}
+
+.carouselCards-img img {
+    margin-left: calc(3 * var(--margin));
+    border-radius: calc(2 * var(--border-radius));
+    width: auto;
+    height: 340px;
+}
+
+.carouselCards.active {
+    display: flex;
+}

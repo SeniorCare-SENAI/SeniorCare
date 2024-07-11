@@ -2,20 +2,23 @@
 <html lang="pt-BR">
 
 <head>
-    <title>Serviço-Funcionário | SeniorCare</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviço de Funcionário | SeniorCare</title>
     <link rel="stylesheet" href="../src/styles/services.css">
     <link rel="stylesheet" href="../src/styles/config.css">
     <link rel="stylesheet" href="../src/styles/header.css">
-    <link rel="stylesheet" href="../src/styles/main.css">
     <link rel="stylesheet" href="../src/styles/footer.css">
-    <script src="../src/assets/js/script.js" defer></script>
+    <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
     <script src="../src/components/header.js" defer></script>
+    <script src="../src/assets/js/script.js" defer></script>
+    <script src="../src/assets/js/conectionEmployee.js" defer></script>
+
+    <link rel="stylesheet" href="../src/styles/table.css">
 </head>
 
 <body>
-    <header id="header" class="flex">
+    <header id="h.eader" class="flex">
         <a class="header-left flex" href="index.html"><img src="../src/assets/images/header/logo.svg"
                 alt="Utilize um navegador mais recente"></a>
         <nav class="header-links">
@@ -23,7 +26,7 @@
             <a href="services.html"><strong>Serviços</strong></a>
             <a href="about.html">Sobre</a>
         </nav>
-        <a class="header-right flex" href="login.html"><img src="../src/assets/images/header/account.svg"
+        <a class="header-right flex" href="#"><img src="../src/assets/images/header/account.svg"
                 alt="Utilize um navegador mais recente"></a>
     </header>
     <main>
@@ -33,48 +36,52 @@
             <button onclick="window.location.href='/public/services-products.html'">Produtos</button>
             <button class="selectButton"
                 onclick="window.location.href='/public/services-employee.html'">Funcionários</button>
+            <button onclick="window.location.href='/public/services-deliveries.html'">Entregas</button>
+            <button onclick="window.location.href='/public/services-donor.html'">Doadores</button>
         </aside>
         <article>
             <nav class="navbar-article">
-                <button onclick="select(1)" id="adicionarProd">Adicionar Funcionário</button>
-                <button onclick="select(2)" id="buscarProd">Buscar Funcionário</button>
-                <button onclick="select(3)" id="apagarProd">Apagar Funcionário</button>
-                <button onclick="select(4)" id="listarProd">Listar Funcionários</button>
+                <button onclick="select(1)" id="adicionarFun">Adicionar Funcionário</button>
+                <button onclick="select(2)" id="buscarFun">Buscar Funcionário</button>
+                <button onclick="select(3)" id="apagarFun">Apagar Funcionário</button>
+                <button onclick="select(4)" id="listarFun">Listar Funcionários</button>
             </nav>
             <section>
                 <div id="section1" class="section">
-                    <div class="group-infos">
+                    <div class="box">
                         <div class="input2">
                             <div class="single-input">
-                                <input required type="text" id="nomeFunc">
+                                <input type="text" id="nomeFunc">
                                 <label for="nomeFunc">Nome do Funcionário</label>
                             </div>
                             <div class="single-input">
-                                <input required type="text" id="cargo">
+                                <input type="text" id="cargo">
                                 <label for="cargo">Cargo</label>
                             </div>
                         </div>
                         <div class="input3">
                             <div class="single-input">
-                                <input required type="number" id="cpf">
+                                <input type="number" id="cpf">
                                 <label for="cpf">CPF</label>
                             </div>
                             <div class="single-input">
-                                <input required type="text" id="situacao">
+                                <input type="text" id="situacao">
                                 <label for="situacao">Situação</label>
                             </div>
                             <div class="single-input">
-                                <input required type="tel" id="telefone">
+                                <input type="tel" id="telefone">
                                 <label for="telefone">Telefone</label>
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="cadastrarFuncionario">Cadastrar</button>
+                            <button onclick="select(1)" id="cadastrarFuncionario">Cadastrar</button>
                         </div>
-                    </div>
+                        <div id="resposta"></div>
+                </div>
                 </div>
                 <div id="section2" class="section">
-                    <div class="group-infos">
+
+                    <div class="box">
                         <div class="input1">
                             <div class="single-input">
                                 <input required type="number" id="codFunc">
@@ -82,24 +89,41 @@
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="buscarFuncionario">Buscar</button>
+                            <button onclick="select(2)" id="buscarFuncionario">Buscar</button>
                         </div>
+                        <div id="resproc"></div>
                     </div>
                 </div>
                 <div id="section3" class="section">
-                    <div class="group-infos">
+                    <div class="box">
                         <div class="input1">
-                            <input type="number" placeholder="Insira o código do funcionário">
+                            <div class="single-input">
+                                <input required type="number" id="codFuncA">
+                                <label for="codFuncA">Insira o código do Funcionário</label>
+                            </div>
                         </div>
                         <div class="section-button">
-                            <button id="apagarFuncionario">Apagar</button>
+                            <button onclick="select(3)" id="apagarFuncionario">Apagar</button>
                         </div>
+                        <div id="resapaga"></div>
                     </div>
                 </div>
                 <div id="section4" class="section">
-                    <div>
+                    <div class="box">
                         <table>
+                            <thead style="color: rgb(0, 0, 0);">
+                                <tr>
+                                    <th>Código Funcionário</th>
+                                    <th>Nome Funcionário</th>
+                                    <th>Cargo Funcionário</th>
+                                    <th>CPF Funcionário</th>
+                                    <th>Situação Funcionário</th>
+                                    <th>Telefone Funcionário</th>
+                                </tr>
+                                <tbody id="res">
 
+                                </tbody>
+                            </thead>
                         </table>
                     </div>
                 </div>

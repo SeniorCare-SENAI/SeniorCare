@@ -15,12 +15,12 @@ window.addEventListener('scroll', function() {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 })
 
-header.addEventListener('mouseenter', function() {
-    header.style.opacity = '1';
-})
+// header.addEventListener('mouseenter', function() {
+//     header.style.opacity = '1';
+// })
 
-header.addEventListener('mouseleave', function() {
-    if (window.pageYOffset <= 0) {
-        header.style.opacity = '1';
-    }
-})
+// header.addEventListener('mouseleave', function() {
+//     if (window.pageYOffset <= 0) {
+//         header.style.opacity = '1';
+//     }
+// })

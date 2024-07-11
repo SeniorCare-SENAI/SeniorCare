@@ -6,6 +6,10 @@
     top: 480px;
 }
 
+footer {
+    height: auto;
+}
+
 .footer-container {
     justify-content: space-evenly;
 }

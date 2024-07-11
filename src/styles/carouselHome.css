@@ -1,0 +1,126 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 90vh;
+    border-radius: 0 0 calc(8 * var(--border-radius)) calc(8 * var(--border-radius));
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.carousel-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-text p {
+    font-size: calc(4 * var(--font-size));
+}
+
+.carousel-text-strong {
+    color: var(--verde-escuro);
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative; 
+}
+
+.opacidade {
+    position: absolute;
+    bottom: 0;
+    left: 0;   
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, transparent, black);
+}
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
+
+.filter-img {
+    filter: brightness(0.4);
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.carousel-control {
+    transition: all ease-in-out 0.2s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    border-radius: 1000px;
+    user-select: none;
+}
+
+.carousel-control:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: rgba(0, 0, 0, 0.808);
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: var(--bege);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    transition: all ease-in-out 0.2s;
+    background-color: var(--verde);
+}
+
+.indicator:active {
+    transition: all ease-in-out 0.2s;
+    background-color: rgba(0, 0, 0, 0.808);
+}

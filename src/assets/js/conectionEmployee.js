@@ -27,7 +27,7 @@ cadastrarFuncionario.addEventListener('click', ()=>{
     console.log(dados)
     
     if((nomeFunc == '')||(cpf == '')||(telefone == '')||(cargo == '')){
-        resposta.innerHTML = `você não pode deixar de colocar as informações Nome Funcionário, CPF, Telefone ou cargo`
+        resposta.innerHTML = `você não pode deixar de colocar as informações acima`
     }else{
         fetch('http://localhost:8080/funcionario',{
             method : "POST",

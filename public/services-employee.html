@@ -16,6 +16,8 @@
     <script src="../src/components/header.js" defer></script>
     <script src="../src/assets/js/script.js" defer></script>
     <script src="conectionEmployee.js" defer></script>
+
+    <link rel="stylesheet" href="../src/styles/table.css">
 </head>
 
 <body>
@@ -98,18 +100,34 @@
                     <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input required type="number" id="codFunc">
-                                <label for="codFunc">Insira o código do Funcionário</label>
+                                <input required type="number" id="codFuncA">
+                                <label for="codFuncA">Insira o código do Funcionário</label>
                             </div>
                         </div>
                         <div class="section-button">
-                            <button onclick="select(3)" id="apagarFuncionario" onclick="escolha()">Apagar</button>
+                            <button onclick="select(3)" id="apagarFuncionario">Apagar</button>
                         </div>
+                        <div id="resapaga"></div>
                     </div>
                 </div>
                 <div id="section4" class="section">
-                    <button onclick="select(4)" id="listarFun">Listar</button>
-                    <div id="res"></div>
+                    <div>
+                        <table>
+                            <thead style="color: rgb(0, 0, 0);">
+                                <tr>
+                                    <th>Código Funcionário</th>
+                                    <th>Nome Funcionário</th>
+                                    <th>Cargo Funcionário</th>
+                                    <th>CPF Funcionário</th>
+                                    <th>Situação Funcionário</th>
+                                    <th>Telefone Funcionário</th>
+                                </tr>
+                                <tbody id="res">
+
+                                </tbody>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
             </section>
         </article>

@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
     <script src="../src/assets/js/script.js" defer></script>
     <script src="../src/components/header.js" defer></script>
+    <script src="../src/assets/js/conectionProducts.js" defer></script>
 </head>
 
 <body>
@@ -45,7 +46,7 @@
             </nav>
             <section>
                 <div id="section1" class="section">
-                    <form>
+                    <div class="box">
                         <div class="input1">
                             <div class="single-input">
                                 <input type="text" required id="nomeProd">
@@ -82,21 +83,21 @@
                                 <label for="funcionario">Funcionário</label>
                             </div>
                             <div class="single-input">
-                                <input required type="text" id="estoque">
+                                <input type="text" id="estoque">
                                 <label for="estoque">Estoque</label>
                             </div>
                         </div>
                         <div class="input1">
-                            <textarea placeholder="descrição"
-                                style="width: 100%; height: 40px; border-radius: 8px"></textarea>
+                            <textarea placeholder="descrição" id="desc" style="width: 100%; height: 40px; border-radius: 8px"></textarea>
                         </div>
                         <div class="section-button">
                             <button id="cadastrarProduto">Cadastrar</button>
                         </div>
-                    </form>
+                    </div>
+                    <div id="resposta"></div>
                 </div>
                 <div id="section2" class="section">
-                    <form>
+                    <div class="box">
                         <div class="input1">
                             <div class="single-input">
                                 <input required type="number" id="codProd">
@@ -105,11 +106,11 @@
                         </div>
                         <div class="section-button">
                             <button id="buscarProduto">Buscar</button>
-                        </div>
-                    </form>
+                        </div> 
+                    </div>
                 </div>
                 <div id="section3" class="section">
-                    <form>
+                    <div class="box">
                         <div class="input1">
                             <div class="single-input">
                                 <input required type="number" id="codProd">
@@ -119,14 +120,12 @@
                         <div class="section-button">
                             <button id="apagarProduto">Apagar</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <div id="section4" class="section">
-                    <form>
-                        <table>
-
-                        </table>
-                    </form>
+                    <table>
+                        
+                    </table>
                 </div>
             </section>
         </article>

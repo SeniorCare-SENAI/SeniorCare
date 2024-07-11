@@ -12,6 +12,9 @@
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
     <script src="../src/assets/js/script.js" defer></script>
     <script src="../src/components/header.js" defer></script>
+    <script src="../src/assets/js/conectionManufactures.js" defer></script>
+
+    <link rel="stylesheet" href="../src/styles/table.css">
 </head>
 
 <body>
@@ -45,11 +48,11 @@
             </nav>
             <section>
                 <div id="section1" class="section">
-                    <form>
+                    <div class="box">
                         <div class="input2">
                             <div class="single-input">
-                                <input type="text" required id="nomeFunc">
-                                <label for="nomeFunc">Nome do Fabricante</label>
+                                <input type="text" required id="nomeFabri">
+                                <label for="nomeFabri">Nome do Fabricante</label>
                             </div>
                             <div class="single-input">
                                 <input type="number" required id="codFunc">
@@ -57,12 +60,13 @@
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="cadastrarFabricante">Cadastrar</button>
+                            <button  onclick="select(1)" id="cadastrarFabricante">Cadastrar</button>
                         </div>
-                    </form>
+                        <div id="rescadastro"></div>
+                    </div>
                 </div>
-                <div id="section2" class="section">
-                    <form>
+                <div  id="section2" class="section">
+                    <div class="box">
                         <div class="input1">
                             <div class="single-input">
                                 <input type="number" required id="codFabri">
@@ -70,29 +74,40 @@
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="buscarFabricante">Buscar</button>
+                            <button onclick="select(2)" id="buscarFabricante">Buscar</button>
                         </div>
-                    </form>
+                        <div id="resbusca"></div>
+                    </div>
                 </div>
                 <div id="section3" class="section">
-                    <form>
+                    <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input type="number" required id="codFabri">
-                                <label for="codFabri">Insira o código do Fabricante</label>
+                                <input type="number" required id="codFabriA">
+                                <label for="codFabriA">Insira o código do Fabricante</label>
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="apagarFabricante">Apagar</button>
+                            <button onclick="select(3)" id="apagarFabricante">Apagar</button>
                         </div>
-                    </form>
+                        <div id="resapagar"></div>
+                    </div>
                 </div>
-                <div id="section4" class="section">
-                    <form>
+                <div  id="section4" class="section">
+                    <div class="box">
                         <table>
+                            <thead style="color: rgb(0, 0, 0);">
+                                <tr>
+                                    <th>Código Fabricante</th>
+                                    <th>Nome Fabricante</th>
+                                    <th>Cargo Funcionário</th>
+                                </tr>
+                                <tbody id="res">
 
+                                </tbody>
+                            </thead>
                         </table>
-                    </form>
+                    </div>
                 </div>
             </section>
         </article>

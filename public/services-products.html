@@ -13,10 +13,11 @@
 
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
     
-    <script src="../src/assets/js/script.js" defer></script>
+    <script src="../src/assets/js/script-two-elemets.js" defer></script>
     <script src="../src/components/header.js" defer></script>
     <script src="../src/assets/js/conectionProducts.js" defer></script>
 
+    <link rel="stylesheet" href="../src/styles/table.css">
 </head>
 
 <body>
@@ -43,9 +44,7 @@
         <article>
             <nav class="navbar-article">
                 <button class="button" onclick="select(1)" id="adicionarProd">Adicionar Produto</button>
-                <button class="button" onclick="select(2)" id="buscarProd">Buscar Produto</button>
-                <button class="button" onclick="select(3)" id="apagarProd">Apagar Produto</button>
-                <button class="button" onclick="select(4)" id="listarProd">Listar Produtos</button>
+                <button class="button" onclick="select(2)" id="listarProd">Listar Produtos</button>
             </nav>
             <section>
                 <div id="section1" class="section">
@@ -93,38 +92,29 @@
                             <button onclick="select(1)" id="cadastrarProduto">Cadastrar</button>
                         </div>
                     </div>
-                    <div id="resposta"></div>
+                    <div id="resCads"></div>
                 </div>
                 <div id="section2" class="section">
                     <div class="box">
-                        <div class="input1">
-                            <div class="single-input">
-                                <input required type="number" id="codProd">
-                                <label for="codProd">Insira o código do Produto</label>
-                            </div>
-                        </div>
-                        <div class="section-button">
-                            <button onclick="select(2)" id="buscarProduto">Buscar</button>
-                        </div> 
+                        <table>
+                            <thead style="color: rgb(0, 0, 0);">
+                                <tr>
+                                    <th>Código Produto</th>
+                                    <th>Nome Produto</th>
+                                    <th>Quantidade Produto</th>
+                                    <th>Valor Produto</th>
+                                    <th>Validade Produto</th>
+                                    <th>Código Doador</th>
+                                    <th>Código Fabricante</th>
+                                    <th>Código Funcionário</th>
+                                    <th>Descrição Produto</th>
+                                </tr>
+                                <tbody id="resList">
+
+                                </tbody>
+                            </thead>
+                        </table>
                     </div>
-                </div>
-                <div id="section3" class="section">
-                    <div class="box">
-                        <div class="input1">
-                            <div class="single-input">
-                                <input required type="number" id="codProd">
-                                <label for="codProd">Insira o código do Produto</label>
-                            </div>
-                        </div>
-                        <div class="section-button">
-                            <button onclick="select(3)" id="apagarProduto">Apagar</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="section4" class="section">
-                    <table>
-                        
-                    </table>
                 </div>
             </section>
         </article>

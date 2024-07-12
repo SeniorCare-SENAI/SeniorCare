@@ -3,10 +3,8 @@ let buscarProduto = document.getElementById('buscarProduto')
 let apagarProduto = document.getElementById('apagarProduto')
 let listarProd = document.getElementById('listarProd')
 
-let resposta = document.getElementById('resposta')
-let resbuscar = document.getElementById('resbuscar')
-let resApagar = document.getElementById('resApagar')
-let res = document.getElementById('res')
+let resCads = document.getElementById('resCads')
+let resList = document.getElementById('resList')
 
 cadastrarProduto.addEventListener('click', ()=>{
     const nomeProd = document.getElementById('nomeProd').value
@@ -33,7 +31,7 @@ cadastrarProduto.addEventListener('click', ()=>{
     console.log(dados)
 
     if((nomeProd == '')||(qtde == '')||(valor == '')||(validade == '')||(validade == '')||(doador == 0)||(fabricante == 0)||(funcionario == 0)){
-        resposta.innerHTML = `você não pode deixar de colocar as informações acima`
+        resCads.innerHTML = `você não pode deixar de colocar as informações acima`
     }else{
         fetch('http://localhost:8080/produto',{
             method : "POST",
@@ -43,10 +41,24 @@ cadastrarProduto.addEventListener('click', ()=>{
         .then(resultado => resultado.json())
         .then(valores => {
             console.log(valores)
-            resposta.innerHTML = `Código Produto: ${valores.codProduto} <br> Nome Produto: ${valores.nomeProduto} <br> Quantidade Produto ${valores.quantidadeProduto} <br> Valor Produto ${valores.valorProduto} <br> Validade Produto ${valores.validadeProduto} <br> Código Doador ${valores.doadorId} <br> Código Fabricante ${valores.fabricanteId} <br> Código Funcionário ${valores.funcionarioId}<br> Descrição Produto ${valores.descricaoProduto}`
+            resCads.innerHTML = `Código Produto: ${valores.codProduto} <br> Nome Produto: ${valores.nomeProduto} <br> Quantidade Produto: ${valores.quantidadeProduto} <br> Valor Produto: ${valores.valorProduto} <br> Validade Produto: ${valores.validadeProduto} <br> Código Doador: ${valores.doadorId} <br> Código Fabricante: ${valores.fabricanteId} <br> Código Funcionário: ${valores.funcionarioId}<br> Descrição Produto: ${valores.descricaoProduto}`
     })
     .catch((err)=>{
         console.error("Erro de conexão",err)
     })
     }
 })
+
+listarProd.addEventListener('click', ()=>{
+    fetch('http://localhost:8080/produto')
+    .then(resposta => resposta.json())
+    .then(dados => {
+        console.log(dados)
+        resList.innerHTML = `` 
+
+        dados.forEach(dad => {
+            resList.innerHTML += `<tr> <td> ${dad.codProduto} </td> <td> ${dad.nomeProduto} </td> <td> ${dad.quantidadeProduto} </td> <td> ${dad.valorProduto} </td> <td> ${dad.validadeProduto} </td> <td> ${dad.doadorId} </td> <td> ${dad.fabricanteId} </td> <td> ${dad.funcionarioId} </td> <td> ${dad.descricaoProduto} </td> </tr>`
+        })
+    })
+    .catch((err) => console.error("Falha ao listar todos os funcionários", err))
+});

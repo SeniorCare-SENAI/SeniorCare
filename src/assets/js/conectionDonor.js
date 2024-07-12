@@ -6,7 +6,7 @@ let listarDoar = document.getElementById('listarDoar')
 let resCadastro = document.getElementById('resCadastro')
 let resbuscar = document.getElementById('resbuscar')
 let resApagar = document.getElementById('resApagar')
-let res = document.getElementById('res')
+let resList = document.getElementById('resList')
 
 cadastrarDoador.addEventListener('click', ()=>{
     const cpf = document.getElementById('cpf').value
@@ -96,12 +96,9 @@ listarDoar.addEventListener('click',()=>{
     .then(resposta => resposta.json())
     .then(dados => {
         console.log(dados)
-        res.innerHTML = `<table>
-        </table>` 
-
-        res.innerHTML = ""
+        resList.innerHTML = `` 
         dados.forEach(dad => {
-            res.innerHTML += `<tr> <td> ${dad.codDoador} </td> <td> ${dad.cnpjDoador} </td> <td> ${dad.cpfDoador} </td> <td> ${dad.enderecoDoador} </td> <td> ${dad.nomeDoador} </td> <td> ${dad.situacaoDoador} </td> <td> ${dad.telefoneDoador} </td> <td> ${dad.codFuncionario} </td> </tr>`
+            resList.innerHTML += `<tr> <td> ${dad.codDoador} </td> <td> ${dad.cnpjDoador} </td> <td> ${dad.cpfDoador} </td> <td> ${dad.enderecoDoador} </td> <td> ${dad.nomeDoador} </td> <td> ${dad.situacaoDoador} </td> <td> ${dad.telefoneDoador} </td> <td> ${dad.codFuncionario} </td> </tr>`
 
         })
     })

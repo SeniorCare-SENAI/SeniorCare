@@ -13,9 +13,9 @@
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
 
     <script src="../src/components/header.js" defer></script>
-    <script src="../src/assets/js/script.js" defer></script>
-
-</head>
+    <script src="../src/assets/js/script-two-elemets.js" defer></script>
+    <script src="../src/assets/js/conectionStock.js" defer></script>
+    <link rel="stylesheet" href="../src/styles/table.css">
 
 <body>
     <header id="header" class="flex">
@@ -40,29 +40,39 @@
         </aside>
         <article>
             <nav class="navbar-article">
-                <button class="button" onclick="select(2)" id="buscarEsto">Buscar Estoque</button>
-                <button class="button" onclick="select(4)" id="listarEsto">Listar Estoques</button>
+                <button class="button" onclick="select(1)" id="buscarEsto">Buscar Estoque</button>
+                <button class="button" onclick="select(2)" id="listarEsto">Listar Estoques</button>
             </nav>
             <section>
-                <div id="section2" class="section">
-                    <form>
+                <div id="section1" class="section">
+                    <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input type="number" required id="codEsto">
-                                <label for="codEsto">Insira o código do Estoque para Buscar</label>
+                                <input type="text" required id="nomeProdEstoque">
+                                <label for="nomeProdEstoque">Insira o Nome do Produto para Buscar</label>
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="buscarEstoque">Buscar</button>
+                            <button onclick="select(1)" id="buscarEstoque">Buscar</button>
                         </div>
-                    </form>
+                        <div id="resBusc"></div>
+                    </div>
                 </div>
-                <div id="section4" class="section">
-                    <form>
+                <div id="section2" class="section">
+                    <div class="box">
                         <table>
+                            <thead style="color: rgb(0, 0, 0);">
+                                <tr>
+                                    <th>Código Estoque</th>
+                                    <th>Código Produto</th>
+                                    <th>Nome Produto</th>
+                                    <th>Quantidade Produto</th>
+                                </tr>
+                                <tbody id="resList">
 
+                                </tbody>
                         </table>
-                    </form>
+                    </div>
                 </div>
             </section>
         </article>

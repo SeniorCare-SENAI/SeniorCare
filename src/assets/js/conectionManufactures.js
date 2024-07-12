@@ -6,7 +6,7 @@ listarFabri = document.getElementById('listarFabri')
 rescadastro = document.getElementById('rescadastro') 
 resbusca = document.getElementById('resbusca') 
 resapagar = document.getElementById('resapagar') 
-res = document.getElementById('res') 
+resList = document.getElementById('resList') 
 
 cadastrarFabricante.addEventListener('click',()=>{
     const nomeFabri = document.getElementById('nomeFabri').value
@@ -84,12 +84,9 @@ listarFabri.addEventListener('click',()=>{
     .then(resposta => resposta.json())
     .then(dados => {
         console.log(dados)
-        res.innerHTML = `<table>
-        </table>` 
-
-        res.innerHTML = ""
+        resList.innerHTML = `` 
         dados.forEach(dad => {
-            res.innerHTML += `<tr> <td> ${dad.codFabricante} </td> <td> ${dad.nomeFabricante} </td> <td> ${dad.codFuncionario} </td> </tr>`
+            resList.innerHTML += `<tr> <td> ${dad.codFabricante} </td> <td> ${dad.nomeFabricante} </td> <td> ${dad.codFuncionario} </td> </tr>`
 
         })
     })

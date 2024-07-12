@@ -13,7 +13,10 @@
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
 
     <script src="../src/components/header.js" defer></script>
-    <script src="../src/assets/js/script.js" defer></script>
+    <script src="../src/assets/js/script-tree-elemets.js" defer></script>
+    <script src="../src/assets/js/conectionDeliveries.js" defer></script>
+
+    <link rel="stylesheet" href="../src/styles/table.css">
 </head>
 
 <body>
@@ -42,12 +45,11 @@
             <nav class="navbar-article">
                 <button class="button" onclick="select(1)" id="adicionarEntreg">Adicionar Entrega</button>
                 <button class="button" onclick="select(2)" id="buscarEntreg">Buscar Entrega</button>
-                <button class="button" onclick="select(3)" id="apagarEntreg">Apagar Entrega</button>
-                <button class="button" onclick="select(4)" id="listarEntreg">Listar Entregas</button>
+                <button class="button" onclick="select(3)" id="listarEntreg">Listar Entregas</button>
             </nav>
             <section>
                 <div id="section1" class="section">
-                    <form>
+                    <div class="box">
                         <div class="input2">
                             <div class="single-input">
                                 <input type="date" required id="dataEntreg">
@@ -60,21 +62,32 @@
                         </div>
                         <div class="input2">
                             <div class="single-input">
-                                <input type="number" required id="codEsto">
-                                <label for="codEsto">Código do estoque</label>
+                                <input type="text" required id="nomeProdEntrega">
+                                <label for="nomeProdEntrega">Nome Produto para Entrega</label>
                             </div>
+                            <div class="single-input">
+                                <input type="number" required id="qtdeEntrega">
+                                <label for="qtdeEntrega">Quantidade de Entrega</label>
+                            </div>
+                        </div>
+                        <div class="input2">
                             <div class="single-input">
                                 <input type="number" required id="codFunc">
                                 <label for="codFunc">Código do funcionário</label>
                             </div>
+                            <div class="single-input">
+                                <input type="number" required id="codEsto">
+                                <label for="codEsto">Código do estoque</label>
+                            </div>
                         </div>
                         <div class="section-button">
-                            <button id="cadastrarEntrega">Cadastrar</button>
+                            <button onclick="select(1)" id="cadastrarEntrega">Cadastrar</button>
                         </div>
-                    </form>
+                        <div id="resCads"></div>
+                    </div>
                 </div>
                 <div id="section2" class="section">
-                    <form>
+                    <div class="box">
                         <div class="input1">
                             <div class="single-input">
                                 <input type="number" required id="codEntreg">
@@ -82,29 +95,30 @@
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="buscarEntrega">Buscar</button>
+                            <button onclick="select(2)" id="buscarEntrega">Buscar</button>
                         </div>
-                    </form>
+                        <div id="resBusc"></div>
+                    </div>
                 </div>
                 <div id="section3" class="section">
-                    <form>
-                        <div class="input1">
-                            <div class="single-input">
-                                <input type="number" required id="codEntreg">
-                                <label for="codEntreg">Insira o código da Entrega</label>
-                            </div>
-                        </div>
-                        <div class="section-button">
-                            <button id="apagarEntrega">Apagar</button>
-                        </div>
-                    </form>
-                </div>
-                <div id="section4" class="section">
-                    <form>
+                    <div class="box">
                         <table>
+                            <thead style="color: rgb(0, 0, 0);">
+                                <tr>
+                                    <th>Código Entrega</th>
+                                    <th>Data Entrega</th>
+                                    <th>Responsável Entrega</th>
+                                    <th>Nome Produto</th>
+                                    <th>Quantidade Produto</th>
+                                    <th>Código Funcionário</th>
+                                    <th>Código Estoque</th>
+                                </tr>
+                                <tbody id="resList">
 
+                                </tbody>
+                            </thead>
                         </table>
-                    </form>
+                    </div>
                 </div>
             </section>
         </article>

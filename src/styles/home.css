@@ -1,3 +1,7 @@
+body {
+    background-color: var(--verde-escuro);
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -6,10 +10,10 @@ main {
     background-color: var(--verde-escuro);
 }
 
-
 /* CARDS */
 .cards {
     flex-wrap: wrap;
+    height: 300px;
 }
 
 .cards-container-img {
@@ -20,8 +24,8 @@ main {
 
 .cards-container {
     transition: all ease-in-out 0.2s;
-    width: 300px;
-    height: 390px;
+    width: 280px;
+    height: 410px;
     box-shadow: 0px 4px 20px var(--drop-shadow-color);
     border-radius: calc(2 * var(--border-radius));
     margin: calc(3 * var(--margin));
@@ -48,8 +52,8 @@ main {
 }
 
 .cards-container-img-image {
-    width: fit-content;
-    height: fit-content;
+    width: 70%;
+    border-radius: 15px;
 }
 
 .cards-container:hover {
@@ -57,4 +61,30 @@ main {
     transform: scale(1.01);
     box-shadow: 0px 4px 40px var(--drop-shadow-color);
 }
+
+.larIdososInfo {
+    background-color: var(--bege);
+    margin: calc(5 * var(--margin));
+    border-radius: calc(2*var(--border-radius));
+    padding: calc(3*var(--padding));
+    display: flex;
+    height: 390px;
+}
+
+.larIdososInfo .text {
+    height: 100%;
+    margin-right: 30px;
+    text-align: justify;
+    font-size: 1.4rem;
+    color: var(--font-dark);
+}
+
+.larIdososInfo img {
+    border-radius: calc(2*var(--border-radius));
+}
 /* END CARDS */
+
+
+footer {
+    /* background-color: var(--verde-escuro); */
+}

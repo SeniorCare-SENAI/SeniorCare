@@ -1,11 +1,12 @@
 body {
-    min-height: 100vh;
+    height: 100vh;
 }
 
 main {
     display: flex;
     margin-top: 64px;
     height: 100vh;
+    background-color: var(--bege);
 }
 
 aside {
@@ -197,6 +198,23 @@ textarea {
     transition: all ease-in-out 0.2s;
     background-color: transparent;
     color: var(--verde-escuro);
+}
+
+.servicesHowToUse {
+    color: var(--font-dark);
+    margin: calc(5 * var(--margin));
+}
+
+.servicesHowToUse-tittle {
+    margin: 0;
+}
+
+.servicesHowToUse-text {
+    margin: calc(3 * var(--margin)) 0;
+}
+
+.servicesHowToUse-list {
+    margin-left: calc(3 * var(--margin));
 }
 
 @media (max-width: 794px) {

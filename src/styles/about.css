@@ -2,6 +2,10 @@ body {
     background-color: var(--verde-escuro);
 }
 
+main {
+    flex-direction: column;
+}
+
 .banner {
     display: flex;
 }
@@ -13,6 +17,8 @@ body {
 
 .banner img {
     width: 100%;
+    height: 739px;
+    margin-top: -40px;
     filter: contrast(150%);
 }
 
@@ -31,20 +37,114 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    box-shadow: 0 10px 10px var(--verde-bem-escuro);
+    box-shadow: 0 10px 0px var(--verde-bem-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .opacidade h1 {
-    margin: 40px 0 0 40px;
     font-size: 150px;
     color: var(--branco-white);
 }
 
-
-
 /* ----------------------------------------------------- */
 
-
 .about {
-    
+    width: 1000px;
+    height: auto;
+    background-color: var(--branco-claro);
+    flex-direction: column;
+    border-radius: calc(2 * var(--border-radius));
+    padding: calc(5 * var(--padding));
+    margin: calc(5 * var(--margin)) 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-devs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about-devs button {
+    transition: all ease-in-out 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 99px;
+    border: none;
+    cursor: pointer;
+}
+
+.about-devs button:hover {
+    transition: all ease-in-out 0.2s;
+    transform: scale(1.03);
+}
+
+.about-devs-img {
+    border-radius: 99px;
+    border: solid 3px var(--verde-escuro);
+}
+
+.about-links {
+    width: 100%;
+}
+
+.about-links-buttons {
+    transition: all ease-in-out 0.2s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    margin: 0 calc(2 * var(--margin));
+    border-radius: var(--border-radius);
+    background-color: var(--branco-white);
+    font-size: calc(2 * var(--font-size));
+    padding: var(--padding) calc(2 * var(--padding));
+}
+
+.about-links-buttons p {
+    color: var(--font-dark);
+    font-weight: bold;
+}
+
+.about-links-buttons:hover {
+    transition: all ease-in-out 0.2s;
+    transform: scale(1.03);
+}
+
+.about-links-buttons img {
+    margin-right: calc(2 * var(--margin));
+    width: 48px;
+}
+
+.bryan, .matheus, .vinicius, .julian {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90px;
+    margin-top: calc(5 * var(--margin));
+}
+
+.bryan.active, .matheus.active, .vinicius.active, .julian.active {
+    display: flex;
+}
+
+.about-devs-img {
+    border-radius: 99px;
+    border: solid 3px var(--verde-escuro);
+    transition: opacity 0.3s ease;
+}
+
+.reduced-opacity {
+    opacity: 0.5;
+}
+
+footer {
+    margin-top: -80px;
 }

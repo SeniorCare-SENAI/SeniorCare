@@ -77,21 +77,17 @@
                                 <label for="doador">Doador</label>
                             </div>
                         </div>
-                        <div class="input2">
+                        <div class="input1">
                             <div class="single-input">
                                 <input required type="text" id="funcionario">
                                 <label for="funcionario">Funcionário</label>
-                            </div>
-                            <div class="single-input">
-                                <input type="text" id="estoque">
-                                <label for="estoque">Estoque</label>
                             </div>
                         </div>
                         <div class="input1">
                             <textarea placeholder="descrição" id="desc" style="width: 100%; height: 40px; border-radius: 8px"></textarea>
                         </div>
                         <div class="section-button">
-                            <button id="cadastrarProduto">Cadastrar</button>
+                            <button onclick="select(1)" id="cadastrarProduto">Cadastrar</button>
                         </div>
                     </div>
                     <div id="resposta"></div>
@@ -105,7 +101,7 @@
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="buscarProduto">Buscar</button>
+                            <button onclick="select(2)" id="buscarProduto">Buscar</button>
                         </div> 
                     </div>
                 </div>
@@ -118,7 +114,7 @@
                             </div>
                         </div>
                         <div class="section-button">
-                            <button id="apagarProduto">Apagar</button>
+                            <button onclick="select(3)" id="apagarProduto">Apagar</button>
                         </div>
                     </div>
                 </div>

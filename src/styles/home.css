@@ -84,8 +84,3 @@ main {
     border-radius: calc(2*var(--border-radius));
 }
 /* END CARDS */
-
-
-footer {
-    /* background-color: var(--verde-escuro); */
-}

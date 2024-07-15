@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="../src/styles/config.css">
     <link rel="stylesheet" href="../src/styles/header.css">
     <link rel="stylesheet" href="../src/styles/footer.css">
+    <link rel="stylesheet" href="../src/styles/scroll.css">
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
     <script src="../src/components/header.js" defer></script>
     <script src="../src/assets/js/script.js" defer></script>
     <script src="../src/assets/js/conectionDonor.js" defer></script>
     <script src="../src/components/label.js" defer></script>
 
+    <link rel="stylesheet" href="../src/styles/resposta.css">k
     <link rel="stylesheet" href="../src/styles/table.css">
 </head>
 
@@ -51,99 +53,97 @@
                     <div class="box">
                         <div class="input2">
                             <div class="single-input">
-                                <input class="input" type="text" id="cnpj">
-                                <label class="label" for="cnpj">CNPJ</label>
+                                <input class="input" type="text" id="cnpjDoa">
+                                <label class="label" for="cnpjDoa">CNPJ</label>
                             </div>
                             <div class="single-input">
-                                <input class="input" type="text" id="cpf">
-                                <label class="label" for="cpf">CPF</label>
-                            </div>
-                        </div>
-                        <div class="input1">
-                            <div class="single-input">
-                                <input class="input" type="text" id="endereco">
-                                <label class="label" for="endereco">endereco</label>
+                                <input class="input" type="text" id="cpfDoa">
+                                <label class="label" for="cpfDoa">CPF</label>
                             </div>
                         </div>
                         <div class="input1">
                             <div class="single-input">
-                                <input class="input" type="email" id="email">
-                                <label class="label" for="email">Email</label>
+                                <input class="input" type="text" id="nomeDoa">
+                                <label class="label" for="nomeDoa">nome do Doador</label>
                             </div>
                         </div>
                         <div class="input2">
                             <div class="single-input">
-                                <input class="input" type="text" id="nomeDoador">
-                                <label class="label" for="nomeDoador">nome do Doador</label>
+                                <input class="input" type="email" id="emailDoa">
+                                <label class="label" for="emailDoa">Email</label>
                             </div>
+                            <div class="single-input">
+                                <input class="input" type="text" id="enderecoDoa">
+                                <label class="label" for="enderecoDoa">endereco</label>
+                            </div>
+                        </div>
+                        <div class="input3">
                             <div class="single-input">
                                 <input class="input" type="number" id="codFunc">
                                 <label class="label" for="codFunc">código do funcionario</label>
                             </div>
-                        </div>
-                        <div class="input2">
                             <div class="single-input">
-                                <input class="input" type="text" id="situacao">
-                                <label class="label" for="situacao">Situação</label>
+                                <input class="input" type="text" id="situacaoDoa">
+                                <label class="label" for="situacaoDoa">Situação</label>
                             </div>
                             <div class="single-input">
-                                <input class="input" type="tel" id="telefone">
-                                <label class="label" for="telefone">telefone</label>
+                                <input class="input" type="tel" id="telefoneDoa">
+                                <label class="label" for="telefoneDoa">telefone</label>
                             </div>
                         </div>
                         <div class="section-button">
                             <button onclick="select(1)" id="cadastrarDoador">Cadastrar</button>
                         </div>
-                        <div id="resCadastro"></div>
+                        <div id="resCads"></div>
                     </div>
                 </div>
                 <div id="section2" class="section">
                     <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input type="number" required id="codDoa">
+                                <input type="number" id="codDoa">
                                 <label for="codDoa">Insira o código do doador</label>
                             </div>
                         </div>
                         <div class="section-button">
                             <button onclick="select(2)" id="buscarDoador">Buscar</button>
                         </div>
-                        <div id="resbuscar"></div> 
+                        <div id="resProc"></div> 
                     </div>
                 </div>
                 <div id="section3" class="section">
                     <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input type="number" required id="codDoaA">
+                                <input type="number" id="codDoaA">
                                 <label for="codDoaA">Insira o código do doador</label>
                             </div>
                         </div>
                         <div class="section-button">
                             <button onclick="select(3)" id="apagarDoador">Apagar</button>
                         </div>
-                        <div id="resApagar"></div> 
+                        <div id="resDele"></div> 
                     </div>
                 </div>
                 <div id="section4" class="section">
                     <div class="box">
                         <table>
-                            <thead style="color: rgb(0, 0, 0);">
+                            <thead>
                                 <tr>
-                                    <th>Código Doador</th>
+                                    <th>Código</th>
+                                    <th>Nome Doador</th>
                                     <th>CNPJ Doador</th>
                                     <th>CPF Doador</th>
-                                    <th>Endereço Doador</th>
-                                    <th>Nome Doador</th>
                                     <th>Situação Doador</th>
+                                    <th>Endereço Doador</th>
+                                    <th>Email Doador</th>
                                     <th>Telefone Doador</th>
-                                    <th>Código Funcionário</th>
+                                    <th>Cod Funcionário</th>
                                 </tr>
-                                <tbody id="res">
-
-                                </tbody>
                             </thead>
-                        </table>
+                            <tbody id="resList">
+
+                            </tbody>
                         </table>
                     </div>
                 </div>

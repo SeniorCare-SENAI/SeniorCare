@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviço de Fabricante | SeniorCare</title>
+    <title>Serviço de Fabricantes | SeniorCare</title>
     <link rel="stylesheet" href="../src/styles/services.css">
     <link rel="stylesheet" href="../src/styles/config.css">
     <link rel="stylesheet" href="../src/styles/header.css">
     <link rel="stylesheet" href="../src/styles/footer.css">
+    <link rel="stylesheet" href="../src/styles/scroll.css">
+    
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
     <script src="../src/assets/js/script.js" defer></script>
     <script src="../src/components/header.js" defer></script>
     <script src="../src/assets/js/conectionManufactures.js" defer></script>
 
+    <link rel="stylesheet" href="../src//styles/resposta.css">
     <link rel="stylesheet" href="../src/styles/table.css">
 </head>
 
@@ -32,8 +35,7 @@
     <main>
         <aside>
             <button onclick="window.location.href='/public/services-stock.html'">Estoque</button>
-            <button class="selectButton"
-                onclick="window.location.href='/public/services-manufacturers.html'">Fabricantes</button>
+            <button class="selectButton" onclick="window.location.href='/public/services-manufacturers.html'">Fabricantes</button>
             <button onclick="window.location.href='/public/services-products.html'">Produtos</button>
             <button onclick="window.location.href='/public/services-employee.html'">Funcionários</button>
             <button onclick="window.location.href='/public/services-deliveries.html'">Entregas</button>
@@ -51,61 +53,61 @@
                     <div class="box">
                         <div class="input2">
                             <div class="single-input">
-                                <input type="text" required id="nomeFabri">
+                                <input type="text" id="nomeFabri">
                                 <label for="nomeFabri">Nome do Fabricante</label>
                             </div>
                             <div class="single-input">
-                                <input type="number" required id="codFunc">
+                                <input type="number" id="codFunc">
                                 <label for="codFunc">Insira o código de Funcionário</label>
                             </div>
                         </div>
                         <div class="section-button">
                             <button  onclick="select(1)" id="cadastrarFabricante">Cadastrar</button>
                         </div>
-                        <div id="rescadastro"></div>
+                        <div id="resCads"></div>
                     </div>
                 </div>
                 <div  id="section2" class="section">
                     <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input type="number" required id="codFabri">
+                                <input type="number" id="codFabri">
                                 <label for="codFabri">Insira o código do Fabricante</label>
                             </div>
                         </div>
                         <div class="section-button">
                             <button onclick="select(2)" id="buscarFabricante">Buscar</button>
                         </div>
-                        <div id="resbusca"></div>
+                        <div id="resProc"></div>
                     </div>
                 </div>
                 <div id="section3" class="section">
                     <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input type="number" required id="codFabriA">
+                                <input type="number" id="codFabriA">
                                 <label for="codFabriA">Insira o código do Fabricante</label>
                             </div>
                         </div>
                         <div class="section-button">
                             <button onclick="select(3)" id="apagarFabricante">Apagar</button>
                         </div>
-                        <div id="resapagar"></div>
+                        <div id="resDele"></div>
                     </div>
                 </div>
                 <div  id="section4" class="section">
                     <div class="box">
                         <table>
-                            <thead style="color: rgb(0, 0, 0);">
+                            <thead>
                                 <tr>
-                                    <th>Código Fabricante</th>
+                                    <th>Código</th>
                                     <th>Nome Fabricante</th>
                                     <th>Cargo Funcionário</th>
                                 </tr>
-                                <tbody id="res">
-
-                                </tbody>
                             </thead>
+                            <tbody id="resList">
+                                
+                            </tbody>
                         </table>
                     </div>
                 </div>

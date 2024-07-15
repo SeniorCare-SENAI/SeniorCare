@@ -1,0 +1,14 @@
+.respostinha {
+    background-color: var(--bege);
+    margin-top: calc(2 * var(--margin));
+    border-radius: var(--border-radius);
+    padding: calc(2 * var(--padding));
+}
+
+.respostinha p {
+    margin-bottom: var(--margin);
+    border: var(--verde-escuro) 1px solid;
+    border-radius: var(--border-radius);
+    padding: calc(var(--border-radius)/2);
+    background-color: white;
+}

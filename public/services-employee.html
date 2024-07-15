@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviço de Funcionário | SeniorCare</title>
+    <title>Serviço de Funcionários | SeniorCare</title>
     <link rel="stylesheet" href="../src/styles/services.css">
     <link rel="stylesheet" href="../src/styles/config.css">
     <link rel="stylesheet" href="../src/styles/header.css">
     <link rel="stylesheet" href="../src/styles/footer.css">
+    <link rel="stylesheet" href="../src/styles/scroll.css">
+    
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
     <script src="../src/components/header.js" defer></script>
     <script src="../src/assets/js/script.js" defer></script>
     <script src="../src/assets/js/conectionEmployee.js" defer></script>
 
+    <link rel="stylesheet" href="../src/styles/resposta.css">
     <link rel="stylesheet" href="../src/styles/table.css">
 </head>
 
@@ -55,32 +58,31 @@
                                 <label for="nomeFunc">Nome do Funcionário</label>
                             </div>
                             <div class="single-input">
-                                <input type="text" id="cargo">
-                                <label for="cargo">Cargo</label>
+                                <input type="text" id="cargoFunc">
+                                <label for="cargoFunc">Cargo</label>
                             </div>
                         </div>
                         <div class="input3">
                             <div class="single-input">
-                                <input type="number" id="cpf">
-                                <label for="cpf">CPF</label>
+                                <input type="number" id="cpfFunc">
+                                <label for="cpfFunc">CPF</label>
                             </div>
                             <div class="single-input">
-                                <input type="text" id="situacao">
-                                <label for="situacao">Situação</label>
+                                <input type="tel" id="telefoneFunc">
+                                <label for="telefoneFunc">Telefone</label>
                             </div>
                             <div class="single-input">
-                                <input type="tel" id="telefone">
-                                <label for="telefone">Telefone</label>
+                                <input type="text" id="situacaoFunc">
+                                <label for="situacaoFunc">Situação</label>
                             </div>
                         </div>
                         <div class="section-button">
                             <button onclick="select(1)" id="cadastrarFuncionario">Cadastrar</button>
                         </div>
-                        <div id="resposta"></div>
-                </div>
+                        <div id="resCads"></div>
+                    </div>
                 </div>
                 <div id="section2" class="section">
-
                     <div class="box">
                         <div class="input1">
                             <div class="single-input">
@@ -91,7 +93,7 @@
                         <div class="section-button">
                             <button onclick="select(2)" id="buscarFuncionario">Buscar</button>
                         </div>
-                        <div id="resproc"></div>
+                        <div id="resProc"></div>
                     </div>
                 </div>
                 <div id="section3" class="section">
@@ -105,13 +107,13 @@
                         <div class="section-button">
                             <button onclick="select(3)" id="apagarFuncionario">Apagar</button>
                         </div>
-                        <div id="resapaga"></div>
+                        <div id="resDele"></div>
                     </div>
                 </div>
                 <div id="section4" class="section">
                     <div class="box">
                         <table>
-                            <thead style="color: rgb(0, 0, 0);">
+                            <thead>
                                 <tr>
                                     <th>Código Funcionário</th>
                                     <th>Nome Funcionário</th>
@@ -120,7 +122,7 @@
                                     <th>Situação Funcionário</th>
                                     <th>Telefone Funcionário</th>
                                 </tr>
-                                <tbody id="res">
+                                <tbody id="resList">
 
                                 </tbody>
                             </thead>

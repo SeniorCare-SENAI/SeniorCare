@@ -1,10 +1,14 @@
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+
 }
 
-tbody {
-    margin: 0;
-    padding: 0;
+thead {
+    background-color: var(--verde-escuro);
+    color: white;
 }
 
 tr {
@@ -12,7 +16,22 @@ tr {
     margin: 0;
 }
 
-td {
-    border: 1px solid black;
+th {
+    padding: var(--padding) 0;
+}
+
+
+tbody {
     margin: 0;
+    padding: var(--padding);
+    background-color: var(--branco-white);
+}
+
+tbody > tr:nth-of-type(even) {
+    background-color: white;
+}
+
+td {
+    margin: 0;
+    padding: 10px;
 }

@@ -45,6 +45,7 @@ cadastrarProduto.addEventListener('click', () => {
         })
         .catch((err) => {
             console.error("Erro de conexão", err)
+            resCads.innerHTML += `<div class='respostinha'>Confira novamente se os códigos foram inseridos corretamente</div>`
         })
     }
 })

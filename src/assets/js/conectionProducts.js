@@ -38,14 +38,15 @@ cadastrarProduto.addEventListener('click', () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(dados)
         })
-            .then(resultado => resultado.json())
-            .then(valores => {
-                console.log(valores)
-                resCads.innerHTML += `<div class='respostinha'><p> Código Produto: ${valores.codProduto} </p> <p> Nome Produto: ${valores.nomeProduto} </p> <p> Quantidade Produto: ${valores.quantidadeProduto} </p> <p> Valor Produto: ${valores.valorProduto} </p> <p> Validade Produto: ${valores.validadeProduto} </p> <p> Código Doador: ${valores.doadorId} </p> <p> Código Fabricante: ${valores.fabricanteId} </p> <p> Código Funcionário: ${valores.funcionarioId}</p> <p> Descrição Produto: ${valores.descricaoProduto}</p> </div>`
-            })
-            .catch((err) => {
-                console.error("Erro de conexão", err)
-            })
+        .then(resultado => resultado.json())
+        .then(valores => {
+            console.log(valores)
+            resCads.innerHTML += `<div class='respostinha'><p> Código Produto: ${valores.codProduto} </p> <p> Nome Produto: ${valores.nomeProduto} </p> <p> Quantidade Produto: ${valores.quantidadeProduto} </p> <p> Valor Produto: ${valores.valorProduto} </p> <p> Validade Produto: ${valores.validadeProduto} </p> <p> Código Doador: ${valores.doadorId} </p> <p> Código Fabricante: ${valores.fabricanteId} </p> <p> Código Funcionário: ${valores.funcionarioId}</p> <p> Descrição Produto: ${valores.descricaoProduto}</p> </div>`
+        })
+        .catch((err) => {
+            console.error("Erro de conexão", err)
+            resCads.innerHTML += `<div class='respostinha'>Confira novamente se os códigos foram inseridos corretamente</div>`
+        })
     }
 })
 

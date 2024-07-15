@@ -33,7 +33,7 @@ cadastrarFabricante.addEventListener('click', () => {
             .then(resultado => resultado.json())
             .then(valores => {
                 console.log(valores)
-                resCads.innerHTML += `<div class='respostinha'> Código Fabricante: ${valores.codFabricante} <br> Nome Fabricante: ${valores.nomeFabricante} <br> Código Funcionário ${valores.codFuncionario} </div>`
+                resCads.innerHTML += `<div class='respostinha'><p> Código Fabricante: ${valores.codFabricante} </p> <p> Nome Fabricante: ${valores.nomeFabricante} </p> <p> Código Funcionário ${valores.codFuncionario}</p> </div>`
             })
             .catch((err) => {
                 console.error("Erro de conexão", err)
@@ -81,7 +81,7 @@ apagarFabricante.addEventListener('click', () => {
                 method: "DELETE",
             })
                 .then(resposta => resposta.text())
-                .then(resDele.innerHTML += "Fabricante apagado com sucesso!")
+                .then(resDele.innerHTML += "<div class='respostinha'>Fabricante apagado com sucesso!</div>")
                 .catch((err) => {
                     console.error("Erro ao apagar o fabricante!", err)
                     resDele.innerHTML += `<div class='respostinha'>Código Inválido</div>`

@@ -46,10 +46,10 @@ cadastrarDoador.addEventListener('click', () => {
             .then(resultado => resultado.json())
             .then(valores => {
                 console.log(valores)
-                if (cpf == '') {
-                    resCads.innerHTML = `<div class='respostinha'> <p>Código: ${valores.codDoador}</p> <p>Nome: ${valores.nomeDoador}</p> <p>CPF: ${valores.cpfDoador}</p> <p>Endereço: ${valores.enderecoDoador}</p> <p>Email: ${valores.emailDoador}</p> <p>Situação: ${valores.situacaoDoador}</p> <p>Telefone: ${valores.telefoneDoador}</p> </div> Código do Funcionário: ${valores.codFuncionario}`
-                } else if (cnpj == '') {
-                    resCads.innerHTML = `<div class='respostinha'> <p>Código: ${valores.codDoador}</p> <p>Nome: ${valores.nomeDoador}</p> <p>CNPJ: ${valores.cnpjDoador}</p> <p>Situação: ${valores.situacaoDoador}</p> <p>Telefone: ${valores.telefoneDoador}</p> </div> Código do Funcionário: ${valores.codFuncionario}`
+                if (cpfDoa == '') {
+                    resCads.innerHTML = `<div class='respostinha'> <p>Código: ${valores.codDoador}</p> <p>Nome: ${valores.nomeDoador}</p> <p>CPF: ${valores.cpfDoador}</p> <p>Endereço: ${valores.enderecoDoador}</p> <p>Email: ${valores.emailDoador}</p> <p>Situação: ${valores.situacaoDoador}</p> <p>Telefone: ${valores.telefoneDoador}</p><p>Código do Funcionário: ${valores.codFuncionario}</p> </div>`
+                } else if (cnpjDoa == '') {
+                    resCads.innerHTML = `<div class='respostinha'> <p>Código: ${valores.codDoador}</p> <p>Nome: ${valores.nomeDoador}</p> <p>CNPJ: ${valores.cnpjDoador}</p> <p>Situação: ${valores.situacaoDoador}</p> <p>Telefone: ${valores.telefoneDoador}</p> <p>Código do Funcionário: ${valores.codFuncionario}</p></div>`
                 }
             })
             .catch((err) => {
@@ -73,7 +73,7 @@ buscarDoador.addEventListener('click', () => {
         fetch(`http://localhost:8080/doador/${codDoa}`)
             .then(resposta => resposta.json(dados))
             .then(valores => {
-                resProc.innerHTML += `<div class='respostinha'> <p>Código: ${valores.codDoador}</p> <p>Nome: ${valores.nomeDoador}</p> <p>CPF: ${valores.cpfDoador}</p> <p>CNPJ: ${valores.cnpjDoador}</p> <p>Endereço: ${valores.enderecoDoador}</p> <p>Email: ${valores.emailDoador}</p> <p>Situação: ${valores.situacaoDoador}</p> <p>Telefone: ${valores.telefoneDoador}</p> </div> Código do Funcionário: ${valores.codFuncionario}`
+                resProc.innerHTML += `<div class='respostinha'> <p>Código: ${valores.codDoador}</p> <p>Nome: ${valores.nomeDoador}</p> <p>CPF: ${valores.cpfDoador}</p> <p>CNPJ: ${valores.cnpjDoador}</p> <p>Endereço: ${valores.enderecoDoador}</p> <p>Email: ${valores.emailDoador}</p> <p>Situação: ${valores.situacaoDoador}</p> <p>Telefone: ${valores.telefoneDoador}</p><p>Código do Funcionário: ${valores.codFuncionario}</p> </div> `
             })
             .catch((err) => {
                 console.error("Falha ao tentar encontrar Doador!", err)

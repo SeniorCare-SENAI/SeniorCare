@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header id="h.eader" class="flex">
+    <header id="header" class="flex">
         <a class="header-left flex" href="index.html"><img src="../src/assets/images/header/logo.svg"
                 alt="Utilize um navegador mais recente"></a>
         <nav class="header-links">
@@ -37,8 +37,7 @@
             <button onclick="window.location.href='/public/services-stock.html'">Estoque</button>
             <button onclick="window.location.href='/public/services-manufacturers.html'">Fabricantes</button>
             <button onclick="window.location.href='/public/services-products.html'">Produtos</button>
-            <button class="selectButton"
-                onclick="window.location.href='/public/services-employee.html'">Funcionários</button>
+            <button class="selectButton" onclick="window.location.href='/public/services-employee.html'">Funcionários</button>
             <button onclick="window.location.href='/public/services-deliveries.html'">Entregas</button>
             <button onclick="window.location.href='/public/services-donor.html'">Doadores</button>
         </aside>
@@ -86,7 +85,7 @@
                     <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input required type="number" id="codFunc">
+                                <input type="number" id="codFunc">
                                 <label for="codFunc">Insira o código do Funcionário</label>
                             </div>
                         </div>
@@ -100,7 +99,7 @@
                     <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input required type="number" id="codFuncA">
+                                <input type="number" id="codFuncA">
                                 <label for="codFuncA">Insira o código do Funcionário</label>
                             </div>
                         </div>
@@ -115,17 +114,17 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Código Funcionário</th>
+                                    <th>Código</th>
                                     <th>Nome Funcionário</th>
                                     <th>Cargo Funcionário</th>
                                     <th>CPF Funcionário</th>
                                     <th>Situação Funcionário</th>
                                     <th>Telefone Funcionário</th>
                                 </tr>
-                                <tbody id="resList">
-
-                                </tbody>
                             </thead>
+                            <tbody id="resList">
+
+                            </tbody>
                         </table>
                     </div>
                 </div>

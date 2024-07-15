@@ -18,7 +18,7 @@ cadastrarFuncionario.addEventListener('click', () => {
     resCads.innerHTML = ''
 
     if ((nomeFunc == '') || (cpfFunc == '') || (telefoneFunc == '') || (cargoFunc == '')) {
-        resCads.innerHTML = `<div class='respostinha'>Você não pode deixar de colocar as informações acima </div>`
+        resCads.innerHTML += `<div class='respostinha'>Você não pode deixar de colocar as informações acima </div>`
     } else {
 
         const dados = {
@@ -36,14 +36,14 @@ cadastrarFuncionario.addEventListener('click', () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(dados)
         })
-            .then(resultado => resultado.json())
-            .then(valores => {
-                console.log(valores)
-                resCads.innerHTML = `<div class='respostinha'> <p>Código: ${valores.codFuncionario}</p> <p>Nome: ${valores.nomeFuncionario}</p> <p>Cargo: ${valores.cargoFuncionario}</p> <p>CPF: ${valores.cpfFuncionario}</p> <p>Situação: ${valores.situacaoFuncionario}</p> <p>Telefone: ${valores.telefoneFuncionario}</p> </div>`
-            })
-            .catch((err) => {
-                console.error("Erro de conexão", err)
-            })
+        .then(resultado => resultado.json())
+        .then(valores => {
+            console.log(valores)
+            resCads.innerHTML += `<div class='respostinha'> <p>Código: ${valores.codFuncionario}</p> <p>Nome: ${valores.nomeFuncionario}</p> <p>Cargo: ${valores.cargoFuncionario}</p> <p>CPF: ${valores.cpfFuncionario}</p> <p>Situação: ${valores.situacaoFuncionario}</p> <p>Telefone: ${valores.telefoneFuncionario}</p> </div>`
+        })
+        .catch((err) => {
+            console.error("Erro de conexão", err)
+        })
     }
 })
 
@@ -98,7 +98,6 @@ apagarFuncionario.addEventListener('click', () => {
 
 
 });
-
 
 listarFun.addEventListener('click', () => {
     fetch('http://localhost:8080/funcionario')

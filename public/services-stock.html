@@ -9,17 +9,14 @@
     <link rel="stylesheet" href="../src/styles/config.css">
     <link rel="stylesheet" href="../src/styles/header.css">
     <link rel="stylesheet" href="../src/styles/footer.css">
+    <link rel="stylesheet" href="../src/styles/scroll.css">
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
     <script src="../src/components/header.js" defer></script>
-<<<<<<< HEAD
     <script src="../src/assets/js/script-two-elemets.js" defer></script>
     <script src="../src/assets/js/conectionStock.js" defer></script>
+    
+    <link rel="stylesheet" href="../src/styles/resposta.css">
     <link rel="stylesheet" href="../src/styles/table.css">
-=======
-    <script src="../src/assets/js/script.js" defer></script>
-</head>
->>>>>>> 0f2780541bb9582dd8ae90be16f9a66d9e07690a
-
 <body>
     <header id="header" class="flex">
         <a class="header-left flex" href="index.html"><img src="../src/assets/images/header/logo.svg"
@@ -58,22 +55,23 @@
                         <div class="section-button">
                             <button onclick="select(1)" id="buscarEstoque">Buscar</button>
                         </div>
-                        <div id="resBusc"></div>
+                        <div id="resProc"></div>
                     </div>
                 </div>
                 <div id="section2" class="section">
                     <div class="box">
                         <table>
-                            <thead style="color: rgb(0, 0, 0);">
+                            <thead>
                                 <tr>
-                                    <th>Código Estoque</th>
+                                    <th>Código</th>
                                     <th>Código Produto</th>
                                     <th>Nome Produto</th>
                                     <th>Quantidade Produto</th>
                                 </tr>
-                                <tbody id="resList">
+                            </thead>
+                            <tbody id="resList">
 
-                                </tbody>
+                            </tbody>
                         </table>
                     </div>
                 </div>

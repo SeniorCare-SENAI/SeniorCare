@@ -9,19 +9,15 @@
     <link rel="stylesheet" href="../src/styles/config.css">
     <link rel="stylesheet" href="../src/styles/header.css">
     <link rel="stylesheet" href="../src/styles/footer.css">
+    <link rel="stylesheet" href="../src/styles/Scroll.css">
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
-<<<<<<< HEAD
-    
     <script src="../src/assets/js/script-two-elemets.js" defer></script>
     <script src="../src/components/header.js" defer></script>
     <script src="../src/assets/js/conectionProducts.js" defer></script>
-
+    
+    
+    <link rel="stylesheet" href="../src/styles/resposta.css">
     <link rel="stylesheet" href="../src/styles/table.css">
-=======
-    <script src="../src/assets/js/script.js" defer></script>
-    <script src="../src/components/header.js" defer></script>
-    <script src="../src/assets/js/conectionProducts.js" defer></script>
->>>>>>> 0f2780541bb9582dd8ae90be16f9a66d9e07690a
 </head>
 
 <body>
@@ -40,8 +36,7 @@
         <aside>
             <button onclick="window.location.href='/public/services-stock.html'">Estoque</button>
             <button onclick="window.location.href='/public/services-manufacturers.html'">Fabricantes</button>
-            <button class="selectButton"
-                onclick="window.location.href='/public/services-products.html'">Produtos</button>
+            <button class="selectButton" onclick="window.location.href='/public/services-products.html'">Produtos</button>
             <button onclick="window.location.href='/public/services-employee.html'">Funcionários</button>
             <button onclick="window.location.href='/public/services-deliveries.html'">Entregas</button>
             <button onclick="window.location.href='/public/services-donor.html'">Doadores</button>
@@ -56,68 +51,68 @@
                     <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input type="text" required id="nomeProd">
+                                <input type="text" id="nomeProd">
                                 <label for="nomeProd">Nome do Produto</label>
                             </div>
                         </div>
                         <div class="input3">
                             <div class="single-input">
-                                <input type="number" required id="qtde">
-                                <label for="qtde">Quantidade</label>
+                                <input type="number" id="qtdeProd">
+                                <label for="qtdeProd">Quantidade</label>
                             </div>
                             <div class="single-input">
-                                <input required type="number" id="valor">
-                                <label for="valor">Valor</label>
+                                <input type="number" id="valorProd">
+                                <label for="valorProd">Valor</label>
                             </div>
                             <div class="single-input">
-                                <input required type="date" id="validade">
-                                <label for="validade">Validade</label>
+                                <input type="date" required id="validadeProd">
+                                <label for="validadeProd">Validade</label>
                             </div>
                         </div>
                         <div class="input2">
                             <div class="single-input">
-                                <input required type="text" id="fabricante">
+                                <input type="text" id="fabricante">
                                 <label for="fabricante">Fabricante</label>
                             </div>
                             <div class="single-input">
-                                <input required type="text" id="doador">
+                                <input type="text" id="doador">
                                 <label for="doador">Doador</label>
                             </div>
                         </div>
                         <div class="input1">
                             <div class="single-input">
-                                <input required type="text" id="funcionario">
+                                <input type="text" id="funcionario">
                                 <label for="funcionario">Funcionário</label>
                             </div>
                         </div>
                         <div class="input1">
-                            <textarea placeholder="descrição" id="desc" style="width: 100%; height: 40px; border-radius: 8px"></textarea>
+                            <textarea placeholder="descrição" id="descProd" style="width: 100%; height: 40px; border-radius: 8px"></textarea>
                         </div>
                         <div class="section-button">
                             <button onclick="select(1)" id="cadastrarProduto">Cadastrar</button>
                         </div>
+                        <div id="resCads"></div>
                     </div>
-                    <div id="resCads"></div>
                 </div>
                 <div id="section2" class="section">
                     <div class="box">
                         <table>
-                            <thead style="color: rgb(0, 0, 0);">
+                            <thead>
                                 <tr>
-                                    <th>Código Produto</th>
+                                    <th>Código</th>
                                     <th>Nome Produto</th>
-                                    <th>Quantidade Produto</th>
+                                    <th>Qtde Produto</th>
                                     <th>Valor Produto</th>
                                     <th>Validade Produto</th>
-                                    <th>Código Doador</th>
-                                    <th>Código Fabricante</th>
-                                    <th>Código Funcionário</th>
+                                    <th>Cod Doador</th>
+                                    <th>Cod Fabricante</th>
+                                    <th>Cod Funcionário</th>
                                     <th>Descrição Produto</th>
                                 </tr>
-                                <tbody id="resList">
-
-                                </tbody>
                             </thead>
+                            <tbody id="resList">
+
+                            </tbody>
                         </table>
                     </div>
                 </div>

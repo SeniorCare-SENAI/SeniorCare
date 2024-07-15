@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="../src/styles/config.css">
     <link rel="stylesheet" href="../src/styles/header.css">
     <link rel="stylesheet" href="../src/styles/footer.css">
+    <link rel="stylesheet" href="../src/styles/scroll.css">
     <link rel="shortcut icon" href="../src/assets/images/icon/logo.svg" type="image/x-icon">
     <script src="../src/components/header.js" defer></script>
     <script src="../src/assets/js/script-tree-elemets.js" defer></script>
     <script src="../src/assets/js/conectionDeliveries.js" defer></script>
 
+    <link rel="stylesheet" href="../src/styles/resposta.css">
     <link rel="stylesheet" href="../src/styles/table.css">
 </head>
 
@@ -54,27 +56,27 @@
                                 <label for="dataEntreg">data da entrega</label>
                             </div>
                             <div class="single-input">
-                                <input type="text" required id="resposavelEntreg">
+                                <input type="text" id="resposavelEntreg">
                                 <label for="resposavelEntreg">Responsável pela entrega</label>
                             </div>
                         </div>
                         <div class="input2">
                             <div class="single-input">
-                                <input type="text" required id="nomeProdEntrega">
+                                <input type="text" id="nomeProdEntrega">
                                 <label for="nomeProdEntrega">Nome Produto para Entrega</label>
                             </div>
                             <div class="single-input">
-                                <input type="number" required id="qtdeEntrega">
+                                <input type="number" id="qtdeEntrega">
                                 <label for="qtdeEntrega">Quantidade de Entrega</label>
                             </div>
                         </div>
                         <div class="input2">
                             <div class="single-input">
-                                <input type="number" required id="codFunc">
+                                <input type="number" id="codFunc">
                                 <label for="codFunc">Código do funcionário</label>
                             </div>
                             <div class="single-input">
-                                <input type="number" required id="codEsto">
+                                <input type="number" id="codEsto">
                                 <label for="codEsto">Código do estoque</label>
                             </div>
                         </div>
@@ -88,33 +90,33 @@
                     <div class="box">
                         <div class="input1">
                             <div class="single-input">
-                                <input type="number" required id="codEntreg">
+                                <input type="number" id="codEntreg">
                                 <label for="codEntreg">Insira o código da Entrega</label>
                             </div>
                         </div>
                         <div class="section-button">
                             <button onclick="select(2)" id="buscarEntrega">Buscar</button>
                         </div>
-                        <div id="resBusc"></div>
+                        <div id="resProc"></div>
                     </div>
                 </div>
                 <div id="section3" class="section">
                     <div class="box">
                         <table>
-                            <thead style="color: rgb(0, 0, 0);">
+                            <thead>
                                 <tr>
-                                    <th>Código Entrega</th>
+                                    <th>Código</th>
                                     <th>Data Entrega</th>
                                     <th>Responsável Entrega</th>
                                     <th>Nome Produto</th>
-                                    <th>Quantidade Produto</th>
-                                    <th>Código Funcionário</th>
-                                    <th>Código Estoque</th>
+                                    <th>Qtde Produto</th>
+                                    <th>Cod Funcionário</th>
+                                    <th>Cod Estoque</th>
                                 </tr>
-                                <tbody id="resList">
-
-                                </tbody>
                             </thead>
+                            <tbody id="resList">
+
+                            </tbody>
                         </table>
                     </div>
                 </div>

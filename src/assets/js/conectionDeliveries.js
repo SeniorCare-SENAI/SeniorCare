@@ -49,6 +49,7 @@ cadastrarEntrega.addEventListener('click', () => {
 buscarEntrega.addEventListener('click', () => {
     let codEntreg = Number(document.getElementById('codEntreg').value)
 
+    resProc.innerHTML = ''
 
     if(codEntreg == 0 ){
         resProc.innerHTML += `<div class='respostinha'>Precisa informa o código para que possamos buscar </div>`
